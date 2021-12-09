@@ -3,6 +3,8 @@ package debut;
 import java.util.Scanner;
 
 public class Joueurs {
+	
+	
 
 	//Programme pour verifier si les joueurs rentre bien un nb joueur compris entre 2 et 6 inclus
 	public static int VerificationsaisieNombreJoueurs (Scanner saisie) { 
@@ -22,7 +24,7 @@ public class Joueurs {
 	//Programme pour creer un tableau contenant les noms des joueurs 
 	public static String[] NomJoueur (Scanner saisie, int nombreJoueurs) {
 		String []nomJoueurs;
-		nomJoueurs = new String[nombreJoueurs-1] ;
+		nomJoueurs = new String[nombreJoueurs] ;
 
 
 		// Déclaration d'une variable de type tableau de String.
