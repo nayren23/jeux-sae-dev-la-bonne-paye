@@ -3,9 +3,9 @@ package debut;
 import java.util.Scanner;
 
 public class Joueurs {
-	Scanner saisie = new Scanner(System.in);
 
-	public static int VerificationsaisieNombreJoueurs (Scanner saisie) {
+	//Programme pour verifier si les joueurs rentre bien un nb joueur compris entre 2 et 6 inclus
+	public static int VerificationsaisieNombreJoueurs (Scanner saisie) { 
 		int nombreJoueurs;
 		System.out.println("Entrez le nombre de joueur");
 		nombreJoueurs = Integer.parseInt(saisie.nextLine());
@@ -16,11 +16,10 @@ public class Joueurs {
 
 		System.out.println("\nSuper!!! C'est parti \n");
 		return nombreJoueurs;
-
-
 	}
 
-
+	
+	//Programme pour creer un tableau contenant les noms des joueurs 
 	public static String[] NomJoueur (Scanner saisie, int nombreJoueurs) {
 		String []nomJoueurs;
 		nomJoueurs = new String[nombreJoueurs-1] ;

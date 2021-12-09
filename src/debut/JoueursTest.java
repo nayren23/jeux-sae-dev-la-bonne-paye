@@ -9,15 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 	class DiversesFonctionsTestCorrige {
 
 		
-		@Test
-		public final void testNombre() {
-			assertEquals(1, Joueurs.VerificationsaisieNombreJoueurs(4), "cas positif");
-			
-			assertTrue(1, Joueurs.VerificationsaisieNombreJoueurs(4), "cas positif");
 
-			assertTrue(1, Joueurs.VerificationsaisieNombreJoueurs(4), "cas positif");
-		}
-		
 	
 
 	}
