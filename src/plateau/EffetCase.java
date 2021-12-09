@@ -3,8 +3,11 @@ package plateau;
 public class EffetCase {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+	}
+	
+	public static void cases (String[]plateau,String nomDuJoueur,int argentJoueur,int nombreCourrierJoueur) {
+		
 	}
 
 }
