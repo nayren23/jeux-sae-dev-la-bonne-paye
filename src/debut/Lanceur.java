@@ -8,7 +8,6 @@ public class Lanceur {
 		Scanner saisie = new Scanner(System.in);
 		Menu.menue(saisie);
 
-		Joueurs.NomJoueur(saisie,Joueurs.VerificationsaisieNombreJoueurs(saisie));
 
 		
 		

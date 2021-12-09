@@ -18,7 +18,7 @@ public class Menu {
 
 
 			System.out.println();
-			System.out.println("Saisissez votre choix entre 1 et 5: ");
+			System.out.println("Saisissez votre choix entre 1 et 5 jdhb: ");
 			do {
 				choix=Integer.parseInt(saisie.nextLine());
 				System.out.println("Saisissez votre choix entre 1 et 5: ");

@@ -3,8 +3,8 @@ package debut;
 import java.util.Scanner;
 
 public class Joueurs {
-	
-	
+
+
 
 	//Programme pour verifier si les joueurs rentre bien un nb joueur compris entre 2 et 6 inclus
 	public static int VerificationsaisieNombreJoueurs (Scanner saisie) { 
@@ -20,7 +20,7 @@ public class Joueurs {
 		return nombreJoueurs;
 	}
 
-	
+
 	//Programme pour creer un tableau contenant les noms des joueurs 
 	public static String[] NomJoueur (Scanner saisie, int nombreJoueurs) {
 		String []nomJoueurs;
@@ -30,13 +30,18 @@ public class Joueurs {
 		// Déclaration d'une variable de type tableau de String.
 		// "création" du tableau pour pouvoir contenir nombreJoueurs-1 valeurs de type String.
 
-		
+
 		// remplissage du tableau
 		for (int indiceNomJoueurs = 0 ; indiceNomJoueurs < nomJoueurs.length ; indiceNomJoueurs++) {  
 			System.out.println("Saisir pseudo joueur  " + (indiceNomJoueurs+1) + " : ");
 			nomJoueurs[indiceNomJoueurs] =saisie.nextLine();
+
+			while (nomJoueurs[indiceNomJoueurs]=="" ) { // faire quelque chose pour que les joueurs ont pas le meme pseudo
+				System.out.println("Saisir pseudo joueur  " + (indiceNomJoueurs+1) + " : ");
+				nomJoueurs[indiceNomJoueurs] =saisie.nextLine();
+			}
 		}
-		
+
 		// affichage du contenu du tableau avec un boucle for
 		for (int indiceNomJoueurs = 0 ; indiceNomJoueurs< nomJoueurs.length ; indiceNomJoueurs++) {
 
@@ -45,6 +50,14 @@ public class Joueurs {
 		return nomJoueurs;
 
 	}		
+	
+	//methoses pour que chaque jours est son nombre d'acquissitions de courrier,d'argent
+	public static String[][] CaracteristiquesJoueus (Scanner saisie, int nombreJoueurs) {
+		
+		
+		return null;
+		
+	}
 
 
 
