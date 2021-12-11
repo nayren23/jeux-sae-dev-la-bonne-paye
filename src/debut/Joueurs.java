@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class Joueurs {
 
-
-
 	//Programme pour verifier si les joueurs rentre bien un nb joueur compris entre 2 et 6 inclus
 	public static int VerificationsaisieNombreJoueurs (Scanner saisie) { 
 		int nombreJoueurs;
@@ -54,11 +52,6 @@ public class Joueurs {
 	//methoses pour que chaque jours est son nombre d'acquissitions de courrier,d'argent
 	public static String[][] CaracteristiquesJoueus (Scanner saisie, int nombreJoueurs) {
 		
-		
 		return null;
-		
 	}
-
-
-
 }

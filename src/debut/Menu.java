@@ -12,19 +12,16 @@ public class Menu {
 		do {
 			System.out.println("1. Jouer");
 			System.out.println("2.Lire les regles");
-			System.out.println("3. Afficher la plus grande valeur");
-			System.out.println("4. Afficher la plus petite valeur");
-			System.out.println("5. Quitter");
+			System.out.println("3. Quitter\n");
 
 
-			System.out.println();
-			System.out.println("Saisissez votre choix entre 1 et 5 jdhb: ");
+			System.out.println("Saisissez votre choix entre 1 et 3: ");
 			do {
 				choix=Integer.parseInt(saisie.nextLine());
-				System.out.println("Saisissez votre choix entre 1 et 5: ");
+				System.out.println("Saisissez votre choix entre 1 et 3: ");
 
 			}
-			while (choix!=1 && choix!=2 && choix !=3 && choix!=4 && choix!=5);
+			while (choix!=1 && choix!=2 && choix !=3);
 
 			switch(choix) {
 
@@ -37,23 +34,10 @@ public class Menu {
 			case 2 :
 				Regles.regles(saisie);
 				break;
-
-			case 3 : 
-				System.out.println("la plus grand valeur est de : 20" );
-
-				break;
-
-			case 4 : 
-				System.out.println("la plus petite valeur est de : 0" );
-				break;
-
 			}
 		}			
-		while (choix<5);
-		System.out.println("Au revoir :) ");
-
+		while (choix<3);
+		System.out.println("Au revoir :-) ");
 		saisie.close();	
-
 	}
-
 }
