@@ -148,7 +148,3 @@ public class plateau {
 		}
 	}
 }
-
-
-
-

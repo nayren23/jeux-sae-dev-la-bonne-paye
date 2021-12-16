@@ -6,7 +6,10 @@ public class CartesAcquisition {
 	static int carte_valeurReelle=2;
 	static int carte_commission=3;
 
-
+/**
+ * fonction qui dessinne les cartes avec les valeurs des cartes qui changent
+ * @param carte
+ */
 	public static void dessinCarte (String[]carte) {
 		for (int i=0; i<carte.length;i++) {
 

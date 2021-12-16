@@ -10,7 +10,7 @@ public class Joueurs {
 		System.out.println("Entrez le nombre de joueur");
 		nombreJoueurs = Integer.parseInt(saisie.nextLine());
 		while (nombreJoueurs<2 || nombreJoueurs>6) {
-			System.out.println("Entrez le nombre de joueur");
+			System.out.println("Entrez un nombre de joueur compris entre 2 et 6 !! ");
 			nombreJoueurs = Integer.parseInt(saisie.nextLine());
 		}
 
