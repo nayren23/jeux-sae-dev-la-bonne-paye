@@ -103,6 +103,8 @@ public class plateau {
 		t[12][11] = "Caisse";
 		t[12][13] = "Commune";
 		t[14][12] = +cagnotte +" €";
+		t[14] [22]="r";
+
 		return t;
 	}
 
@@ -147,4 +149,5 @@ public class plateau {
 			System.out.println();
 		}
 	}
+	
 }
