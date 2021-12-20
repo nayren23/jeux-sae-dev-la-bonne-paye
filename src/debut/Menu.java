@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-	public static void menue(Scanner saisie) {
+	public static void menue(Scanner saisie) {   // renvoie le choix juste affiche et  faire class jeu
 
 		System.out.println("LA BONNE PAYE");
 

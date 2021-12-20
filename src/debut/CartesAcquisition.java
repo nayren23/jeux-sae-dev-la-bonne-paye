@@ -1,10 +1,10 @@
 package debut;
 public class CartesAcquisition {
 
-	static int carte_nom=0;
-	static int carte_prixAchat=1;
-	static int carte_valeurReelle=2;
-	static int carte_commission=3;
+	static int carteNom=0;  // mettre maj kamel
+	static int cartePrixAchat=1;
+	static int carteValeurReelle=2;
+	static int carteCommission=3;
 
 /**
  * fonction qui dessinne les cartes avec les valeurs des cartes qui changent
@@ -29,10 +29,10 @@ public class CartesAcquisition {
 
 	public static String[] creerCarteAcquisitions (String nom,  int prixAchat,int valeurReelle, int commission) {			//1 BELLE ANTIQUITE
 		String[]carte = new String[4];
-		carte [carte_nom]= nom;
-		carte [carte_prixAchat]= String.valueOf(prixAchat);
-		carte [carte_valeurReelle]= String.valueOf(valeurReelle);//caste int en string
-		carte [carte_commission]=String.valueOf(commission) ;
+		carte [carteNom]= nom;
+		carte [cartePrixAchat]= String.valueOf(prixAchat);
+		carte [carteValeurReelle]= String.valueOf(valeurReelle);//caste int en string
+		carte [carteCommission]=String.valueOf(commission) ;
 		return carte;
 	}
 

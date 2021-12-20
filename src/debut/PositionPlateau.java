@@ -8,7 +8,7 @@ public class PositionPlateau {
 
 	public static String [] postionCase () {
 		String[] cases = new String[32];//4 pour les 4 chaine de caracteres
-		cases[0]="Depart";		//l'indice du tableau correspond au numéro de la case du tableau de la case
+		cases[0]="0";		//l'indice du tableau correspond au numéro de la case du tableau de la case
 		cases[1]="1";		//la valeur correspond à l'indice de la case a l ecran
 		cases[2]="2";
 		cases[3]="3";
@@ -42,33 +42,32 @@ public class PositionPlateau {
 		cases[31]="13";
 		return  cases;
 	}
-	
+
 	public static  void calculPositionCase (String []indiceCase, int indiceAconnaitre) {
 		int Lignes =0;
 		int Colonnes=0;
 		Lignes = indiceAconnaitre/6;
 		Colonnes=indiceAconnaitre%6;
-		
+
 		//coordonner afficher a lecran :
-		
+
 		int x;
 		int y;
-		x=3+Lignes*4;
-		y=9+Colonnes*32;
+		x=1+Lignes*4;
+		y=1+Colonnes*4;
 		System.out.println("x vaut "+x +"y vaut " +y);
 		
-	
-	
-	
-	//public static void CalculPositionJoueur(int numJoueur, int numCase) {
 		
-		int nbJoueurLignes =3;
-		int ligne= nbJoueurLignes/3;
-		int colonne=nbJoueurLignes%3;
+		int numJoueur =1;
+		int joueur=numJoueur +2; // 3 pour le joueur 1
+		int nbJoueurLignes =3;//nombre allant de  3 à 8 pour joueur 6
+		int ligne= joueur/nbJoueurLignes;//diviser par 3 pour joueur 1 par 2 pour le joueur 2
+		int colonne=0;
+		colonne =joueur%nbJoueurLignes;//diviser par 3 pour joueur 1
 		int xj= x+ligne;
-		int yj=y+colonne*8;
-		
+		int yj=y+colonne*1;
+
 		System.out.println("xj vaut :" +xj+"yj vaut :"+yj);
-		
-}
+
+	}
 }
