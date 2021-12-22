@@ -103,27 +103,6 @@ public class plateau {
 		t[12][11] = "Caisse";
 		t[12][13] = "Commune";
 		t[14][12] = +cagnotte +" €";
-		t[6] [9]="A";/////MODIFICATION
-		t[6] [10]="C";/////MODIFICATION
-		t[6] [11]="Z";/////MODIFICATION
-		t[7] [9]="Z";/////MODIFICATION
-		t[7] [10]="Z";/////MODIFICATION
-		t[7] [11]="Z";/////MODIFICATION
-		t[14] [19]="T";/////MODIFICATION
-		t[15] [18]="L";/////MODIFICATION
-		t[14] [17]="V";/////MODIFICATION
-		t[14] [18]="I";/////MODIFICATION
-		t[15] [17]="A";/////MODIFICATION
-		t[2] [2]="A";/////MODIFICATION
-		t[2] [1]="A";/////MODIFICATION
-
-
-
-
-
-
-
-
 		return t;
 	}
 
