@@ -46,12 +46,5 @@ public class Joueurs {
 			System.out.println("Le nom du joueur  " + (indiceNomJoueurs+1) + " est : " + nomJoueurs[indiceNomJoueurs]);
 		}
 		return nomJoueurs;
-
 	}		
-	
-	//methoses pour que chaque jours est son nombre d'acquissitions de courrier,d'argent
-	public static String[][] CaracteristiquesJoueus (Scanner saisie, int nombreJoueurs) {
-		
-		return null;
-	}
 }

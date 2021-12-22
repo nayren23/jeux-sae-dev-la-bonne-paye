@@ -28,7 +28,7 @@ public class Menu {
 
 			case 1 :
 				System.out.println("La partie commence:");
-				Joueurs.NomJoueur(saisie,Joueurs.VerificationsaisieNombreJoueurs(saisie));
+				Lanceur.lancerJeu();
 				break;
 
 			case 2 :

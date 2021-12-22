@@ -1,5 +1,7 @@
 package debut;
 
+import java.util.Scanner;
+
 public class PositionPlateau {
 
 	
@@ -47,8 +49,8 @@ public class PositionPlateau {
 		return  cases;
 	}
 
-	public static  void calculPositionCase ( int numeroCase) {
-		
+	public static  void calculPositionCase (String[][] plateau, int numeroCase,int numeroJoueur) {
+	
 		
 		int Lignes =0;
 		int Colonnes=0;
@@ -68,8 +70,7 @@ public class PositionPlateau {
 		System.out.println("x vaut "+x +"y vaut " +y);
 		
 		//coordonnée point xj et yj
-		int numJoueur =6;
-		int joueur=numJoueur +2; // 3 pour le joueur 1
+		int joueur=numeroJoueur +3; // 3 pour le joueur 1
 		int nbJoueurLignes =3;//nombre allant de  3 à 8 pour joueur 6
 		int ligne= joueur/nbJoueurLignes;//diviser par 3 pour joueur 1 par 2 pour le joueur 2
 		int colonne=0;
@@ -78,5 +79,14 @@ public class PositionPlateau {
 		int yj=y+colonne*1;
 
 		System.out.println("xj vaut :" +xj+"yj vaut :"+yj);
+		
+	//	plateau[xj][yj]=String.valueOf(numeroJoueur+1)+"(" +String.valueOf(DonneesPartagees.tabArgentJoueur[numeroJoueur])+")";
+		plateau[xj][yj]=DonneesPartagees.tabNomJoueur[numeroJoueur].substring(0,4);
+
+		
+		
+		
+		
+		
 	}
 }

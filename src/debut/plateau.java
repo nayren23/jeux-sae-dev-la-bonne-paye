@@ -1,7 +1,7 @@
 package debut;
-
 public class plateau {
-	public static void main(String[] args) {    
+	public static void afficher() {    
+
 
 		String t[][] = new String [25][25];
 
@@ -24,7 +24,19 @@ public class plateau {
 
 		cagnotte(t);
 
+
+		//parcourir le tab des joeurs pour alimenter positions dans ce tab 
+		for (int i=0;i<DonneesPartagees.nombreJoueurs;i++) {
+			PositionPlateau.calculPositionCase(t, DonneesPartagees.tabcaseActuelleJoueur[i], i);
+		}
+		//parcourir tab cagnotte
+		//...
+		//afficher tab
+
+
 		afficherTableauString(t);
+
+
 	}
 
 	// met un " " dans tout le tableau
@@ -90,7 +102,6 @@ public class plateau {
 		return t;
 	}
 	public static String [][] cagnotte (String t[][]) {
-		int cagnotte=1651;
 		for (int y = 9 ; y <= 15; y++) {
 			t[12][y] =" ";
 		}
@@ -102,7 +113,9 @@ public class plateau {
 		t[16][12] = "_______";
 		t[12][11] = "Caisse";
 		t[12][13] = "Commune";
-		t[14][12] = +cagnotte +" €";
+		t[14][12] = +DonneesPartagees.montantCagnotte +" €";
+
+
 		return t;
 	}
 
@@ -139,6 +152,10 @@ public class plateau {
 	}
 
 	public static void afficherTableauString(String[][] t) {
+		for (int k=0;k<50;k++) {
+			System.out.println();
+		}
+		//clearConsole();
 		for (int ligne = 0 ; ligne < t.length ; ligne++) {
 			for (int colonne = 0 ; colonne < t[ligne].length ; colonne++){
 
@@ -147,5 +164,27 @@ public class plateau {
 			System.out.println();
 		}
 	}
-	
+
+
+	public final static void clearConsole()
+	{
+		try
+		{
+			final String os = System.getProperty("os.name");
+
+			if (os.contains("Windows"))
+			{
+				Runtime.getRuntime().exec("cls");
+			}
+			else
+			{
+				Runtime.getRuntime().exec("clear");
+			}
+		}
+		catch (final Exception e)
+		{
+			//  Handle any exceptions.
+		}
+	}
+
 }
