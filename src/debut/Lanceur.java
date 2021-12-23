@@ -12,7 +12,6 @@ public class Lanceur {
 
 		/*CaseAcquisitions.menueAleatoireAcquisitions(CartesAcquisition.recupererCartesAcquisitions());
 		Menu.menue(saisie);*/
-		//	PositionPlateau.calculPositionCase(0, 0, "A", saisie);
 
 
 
@@ -32,8 +31,8 @@ public class Lanceur {
 		DonneesPartagees.tabNombrePretsJoueur=new int[DonneesPartagees.nombreJoueurs];
 		DonneesPartagees.tabMontantEpargneJoueur=new int[DonneesPartagees.nombreJoueurs];
 		DonneesPartagees.montantCagnotte=0;//cagnotte mise a 0euros
-		
-		//Initialisation des donnees partager avant debut partie
+
+		//Initialisation des donnees partager avant le  debut  de la partie
 		for (int i=0; i<DonneesPartagees.nombreJoueurs;i++) {
 			DonneesPartagees.tabcaseActuelleJoueur[i]=0;//tous les joueurs sur la case depart
 			DonneesPartagees.tabArgentJoueur[i]=650;//chaque jouer recoit 650euros
@@ -42,9 +41,11 @@ public class Lanceur {
 			DonneesPartagees.tabMontantEpargneJoueur[i]=0;//chaque joueur a 0 euros epargner
 		}
 
-		
+
 		plateau.afficher();
-		
+		EffetCases.caseChangementDheure();
+		plateau.afficher();
+
 	}
 
 }

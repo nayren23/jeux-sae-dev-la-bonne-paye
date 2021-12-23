@@ -7,9 +7,10 @@ public class CaseAcquisitions {
 	 * java doc
 	 * @param cartes
 	 */
-	public static void menueAleatoireAcquisitions(String [][] cartes) {
+	public static void menueAleatoireAcquisitions(/*String [][] cartes*/) {
 		System.out.println("Piochez une carte");
 		int choix = (int)(Math.random()*(15));//fois une variable car carte diminue avec le jeu
+		DonneesPartagees.numeroCarteAcquisitions=choix;
 		CartesAcquisition.dessinCarte(CartesAcquisition.recupererCartesAcquisitions()[choix]);
 	}
 }
