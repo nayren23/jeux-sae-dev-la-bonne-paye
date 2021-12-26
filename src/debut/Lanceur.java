@@ -5,10 +5,6 @@ public class Lanceur {
 
 
 	public static void main(String[] args) {
-		Scanner saisie = new Scanner(System.in);
-
-
-
 
 		/*CaseAcquisitions.menueAleatoireAcquisitions(CartesAcquisition.recupererCartesAcquisitions());
 		Menu.menue(saisie);*/
@@ -35,16 +31,47 @@ public class Lanceur {
 		//Initialisation des donnees partager avant le  debut  de la partie
 		for (int i=0; i<DonneesPartagees.nombreJoueurs;i++) {
 			DonneesPartagees.tabcaseActuelleJoueur[i]=0;//tous les joueurs sur la case depart
-			DonneesPartagees.tabArgentJoueur[i]=650;//chaque jouer recoit 650euros
+			DonneesPartagees.tabArgentJoueur[i]=1500;//chaque jouer recoit 1500euros
 			DonneesPartagees.tabNombreAcquisitionsJoueur[i]=0; //chaque joueur possede 0 acquisition
 			DonneesPartagees.tabNombrePretsJoueur[i]=0;//chaque joueur a 0 pret
 			DonneesPartagees.tabMontantEpargneJoueur[i]=0;//chaque joueur a 0 euros epargner
 		}
+		
+		plateau.afficher();
+		DonneesPartagees.tabcaseActuelleJoueur[0]=10;//tous les joueurs sur la case depart
+		MenuEffetsCase.menue();
+		plateau.afficher();
+		DonneesPartagees.tabcaseActuelleJoueur[1]=8;//tous les joueurs sur la case depart
+		DonneesPartagees.indexeJoueurCourant+=1;
+		plateau.afficher();
+		MenuEffetsCase.menue();
+		plateau.afficher();
+		
+		DonneesPartagees.tabcaseActuelleJoueur[2]=8;//tous les joueurs sur la case depart
+		DonneesPartagees.indexeJoueurCourant+=1;
+		plateau.afficher();
+		MenuEffetsCase.menue();
+		plateau.afficher();
+		
+		DonneesPartagees.tabcaseActuelleJoueur[3]=19;//tous les joueurs sur la case depart
+		plateau.afficher();
+		DonneesPartagees.indexeJoueurCourant+=1;
+		MenuEffetsCase.menue();
+		plateau.afficher();
+		
+		DonneesPartagees.tabcaseActuelleJoueur[4]=15;//tous les joueurs sur la case depart
+		plateau.afficher();
+		DonneesPartagees.indexeJoueurCourant+=1;
+		MenuEffetsCase.menue();
+		plateau.afficher();
+
+		DonneesPartagees.tabcaseActuelleJoueur[5]=16;//tous les joueurs sur la case depart
+		plateau.afficher();
+		DonneesPartagees.indexeJoueurCourant+=1;
+		MenuEffetsCase.menue();
+		plateau.afficher();
 
 
-		plateau.afficher();
-		EffetCases.caseChangementDheure();
-		plateau.afficher();
 
 	}
 

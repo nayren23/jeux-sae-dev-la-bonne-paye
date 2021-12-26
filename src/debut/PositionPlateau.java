@@ -1,7 +1,5 @@
 package debut;
 
-import java.util.Scanner;
-
 public class PositionPlateau {
 
 	
