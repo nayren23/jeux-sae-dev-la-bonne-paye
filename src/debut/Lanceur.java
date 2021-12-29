@@ -31,45 +31,42 @@ public class Lanceur {
 		//Initialisation des donnees partager avant le  debut  de la partie
 		for (int i=0; i<DonneesPartagees.nombreJoueurs;i++) {
 			DonneesPartagees.tabcaseActuelleJoueur[i]=0;//tous les joueurs sur la case depart
-			DonneesPartagees.tabArgentJoueur[i]=1500;//chaque jouer recoit 1500euros
+			DonneesPartagees.tabArgentJoueur[i]=5000;//chaque jouer recoit 1500euros
 			DonneesPartagees.tabNombreAcquisitionsJoueur[i]=0; //chaque joueur possede 0 acquisition
 			DonneesPartagees.tabNombrePretsJoueur[i]=0;//chaque joueur a 0 pret
 			DonneesPartagees.tabMontantEpargneJoueur[i]=0;//chaque joueur a 0 euros epargner
 		}
 		
 		plateau.afficher();
-		DonneesPartagees.tabcaseActuelleJoueur[0]=10;//tous les joueurs sur la case depart
-		MenuEffetsCase.menue();
-		plateau.afficher();
-		DonneesPartagees.tabcaseActuelleJoueur[1]=8;//tous les joueurs sur la case depart
-		DonneesPartagees.indexeJoueurCourant+=1;
-		plateau.afficher();
+		DonneesPartagees.tabcaseActuelleJoueur[0]=1;//tous les joueurs sur la case depart
 		MenuEffetsCase.menue();
 		plateau.afficher();
 		
-		DonneesPartagees.tabcaseActuelleJoueur[2]=8;//tous les joueurs sur la case depart
-		DonneesPartagees.indexeJoueurCourant+=1;
-		plateau.afficher();
-		MenuEffetsCase.menue();
-		plateau.afficher();
-		
-		DonneesPartagees.tabcaseActuelleJoueur[3]=19;//tous les joueurs sur la case depart
-		plateau.afficher();
+		DonneesPartagees.tabcaseActuelleJoueur[1]=3;//tous les joueurs sur la case depart
 		DonneesPartagees.indexeJoueurCourant+=1;
 		MenuEffetsCase.menue();
 		plateau.afficher();
 		
-		DonneesPartagees.tabcaseActuelleJoueur[4]=15;//tous les joueurs sur la case depart
+		DonneesPartagees.tabcaseActuelleJoueur[2]=1;//tous les joueurs sur la case depart
+		DonneesPartagees.indexeJoueurCourant+=1;
+		MenuEffetsCase.menue();
 		plateau.afficher();
+		
+		DonneesPartagees.tabcaseActuelleJoueur[3]=3;//tous les joueurs sur la case depart
+		DonneesPartagees.indexeJoueurCourant+=1;
+		MenuEffetsCase.menue();
+		plateau.afficher();
+		
+		DonneesPartagees.tabcaseActuelleJoueur[4]=3;//tous les joueurs sur la case depart
 		DonneesPartagees.indexeJoueurCourant+=1;
 		MenuEffetsCase.menue();
 		plateau.afficher();
 
-		DonneesPartagees.tabcaseActuelleJoueur[5]=16;//tous les joueurs sur la case depart
-		plateau.afficher();
+		DonneesPartagees.tabcaseActuelleJoueur[5]=1;//tous les joueurs sur la case depart
 		DonneesPartagees.indexeJoueurCourant+=1;
 		MenuEffetsCase.menue();
 		plateau.afficher();
+//		CartesCourrier.menueAleatoireCourrier(CartesCourrier.recupererCartesCourrier(),5);
 
 
 

@@ -1,6 +1,12 @@
 package debut;
 
 public class EffetCases {
+	
+	public static void case1Courrier/*case1*/ () {
+		CartesCourrier.effetCartesCourrier();
+		//CartesCourrier.menueAleatoireCourrier(CartesCourrier.recupererCartesCourrier(),0);
+
+	}
 
 	public static void caseConcoursBeaute/*case2*/ () {
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+" vous etes sur la case Concours de Beaute !!");
@@ -8,7 +14,23 @@ public class EffetCases {
 		System.out.println("Bravo : "+DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  , votre chien Toutou remporte 1500 euros à un concours de beauté !!");
 		DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]=(DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+1500);
 	}
+	
+	public static void case3Courrier/*case3*/ () {
+		CartesCourrier.effetCartesCourrier();
+		CartesCourrier.effetCartesCourrier();
+		CartesCourrier.effetCartesCourrier();
+	}
 
+	public static void caseAcquisition/*case4...*/ () {
+		CartesAcquisition.effetCartes();
+	}
+	
+	public static void case2Courrier/*case5*/ () {
+		CartesCourrier.effetCartesCourrier();
+		CartesCourrier.effetCartesCourrier();
+		CartesCourrier.effetCartesCourrier();
+	}
+	
 	public static void caseFamille/*case6*/ () {
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+" vous etes sur la case sortie en famille  !!");
 

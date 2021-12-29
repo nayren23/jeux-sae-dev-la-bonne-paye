@@ -24,7 +24,7 @@ public class Regles {
 				+ "\r\n"
 				+ "		1/L’EPARGNE : Le banquier est responsable des opérations. Si un joueur possède une épargne il ne peut faire un emprunt auprès de la banque. \r\n"
 				+ "		-----------\r\n"
-				+ "		L’épargnant met l’argent dans son livret. Si, par exemple, à la fin du mois il a épargné 1500 euros, il touchera 150 euros d’intérêts (ou 1500 francs).\r\n"
+				+ "		L’épargnant met l’argent dans son livret. Si, par exemple, à la fin du mois il a épargné 1500 euros, il touchera 150 euros d’intérêts.\r\n"
 				+ "\r\n"
 				+ "		-Attention, l’épargnant ne peut toucher ses intérêts à la fin du mois, que s’il a versé les sommes dans son livret avant le 23 du mois (avant la case 23). \r\n"
 				+ "		-Après le 23 du mois, il est en effet interdit de mettre de l’argent dans son livret.\r\n"

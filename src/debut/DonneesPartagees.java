@@ -5,6 +5,9 @@ public class DonneesPartagees {
 	//nombre de joueurs de 2 ...6
 	public static int nombreJoueurs;
 	
+	//contient le choix actuelle de l Acquisition
+	public static int choixCarteAcquisition;
+	
 	//indexe du joueurs  qui joue actuellement de 0...n
 	public static int indexeJoueurCourant;	
 	
@@ -36,6 +39,8 @@ public class DonneesPartagees {
 	//choix de la carte acquisition
 	public static int numeroCarteAcquisitions;
 	
+	//choix de la carte courrier
+	public static int numeroCarteCourrier;
 	public static int [] postionCase () {
 		int[] cases = new int[32];//4 pour les 4 chaine de caracteres
 		cases[0]=0;		//l'indice du tableau correspond au numéro de la case du tableau de la case
@@ -72,4 +77,26 @@ public class DonneesPartagees {
 		cases[31]=13;
 		return  cases;
 	}
+	
+	public static String[][] recupererCartesAcquisitions () {			
+		String[][] cartes = new String[15][5];//4 pour les 4 chaine de caracteres
+		cartes [0]=CartesAcquisition.creerCarteAcquisitions("1 BELLE ANTIQUITE", 3000,7500, 300,-1);    						//1 BELLE ANTIQUITE 	total payer 3300
+		cartes [1] =CartesAcquisition.creerCarteAcquisitions("1 VOITURE DE COURSE",2850, 3600, 300,-1); 						//1 VOITURE DE COURSE 	total payer 3150
+		cartes [2]=CartesAcquisition.creerCarteAcquisitions("1 MOTO", 2400, 3600, 150,-1);									//1 MOTO					total payer 2550
+		cartes [3]=CartesAcquisition.creerCarteAcquisitions("1 COLLECTION DE B.D", 600, 1650, 50,-1);						//1 COLLECTION DE B.D		total payer 650
+		cartes [4]=CartesAcquisition.creerCarteAcquisitions("//1 CHATEAU EN ESPAGNE", 4500, 7500, 300,-1);					//1 CHATEAU EN ESPAGNE		total payer 4800
+		cartes [5]=CartesAcquisition.creerCarteAcquisitions("1 TRACTEUR AGRICOLE", 2850, 3600, 300,-1);						//1 TRACTEUR AGRICOLE		total payer 3150
+		cartes [6]=CartesAcquisition.creerCarteAcquisitions("1 COLLECTION DE TIMBRES", 1050, 1800, 150,-1);					//1 COLLECTION DE TIMBRES	total payer 1200
+		cartes [7]=CartesAcquisition.creerCarteAcquisitions("1 BAGUETTES MAGIQUE", 2400, 3600, 150,-1);						//1 BAGUETTES MAGIQUE		total payer 2550
+		cartes [8]=CartesAcquisition.creerCarteAcquisitions("1 VOYAGES SUR LA LUNE", 1050, 1800, 150,-1);					//1 VOYAGES SUR LA LUNE		total payer 1200
+		cartes [9]=CartesAcquisition.creerCarteAcquisitions("1 SALON DE BEAUTE", 3300, 4800, 400,-1);						//1 SALON DE BEAUTE			total payer 3700
+		cartes [10]=CartesAcquisition.creerCarteAcquisitions("1 MEUBLE ANCIEN", 450, 1200, 100,-1);							//1 MEUBLE ANCIEN			total payer 550
+		cartes [11]=CartesAcquisition.creerCarteAcquisitions("1 PICASSO (SANS DOUTE FAUX)", 2100, 4200, 200,-1);				//1 PICASSO (SANS DOUTE FAUX)total payer 2300
+		cartes [12]=CartesAcquisition.creerCarteAcquisitions("1 CHIEN DE RACE", 600, 1650, 100,-1);							//1 CHIEN DE RACE			total payer 700
+		cartes [13]=CartesAcquisition.creerCarteAcquisitions("1 PISCINE", 3000, 7500, 300,-1);								//1 PISCINE					total payer 3300
+		cartes [14]=CartesAcquisition.creerCarteAcquisitions("1 SCULPTURE DE JARDIN", 450, 1200, 100,-1);					//1 SCULPTURE DE JARDIN		total payer 550
+		return cartes;
+	}
+	
+	
 	}
