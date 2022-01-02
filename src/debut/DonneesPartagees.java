@@ -77,8 +77,11 @@ public class DonneesPartagees {
 		cases[31]=13;
 		return  cases;
 	}
-	
-	public static String[][] recupererCartesAcquisitions () {			
+	public static String[][] cartesAcquisitions  = new String[15][5];//4 pour les 4 chaine de caracteres
+
+
+	// NE DOIT ETRE APPELE Qu'1 FOIS
+	public static String [][] creerCartesAcquisitions () {			
 		String[][] cartes = new String[15][5];//4 pour les 4 chaine de caracteres
 		cartes [0]=CartesAcquisition.creerCarteAcquisitions("1 BELLE ANTIQUITE", 3000,7500, 300,-1);    						//1 BELLE ANTIQUITE 	total payer 3300
 		cartes [1] =CartesAcquisition.creerCarteAcquisitions("1 VOITURE DE COURSE",2850, 3600, 300,-1); 						//1 VOITURE DE COURSE 	total payer 3150
@@ -95,8 +98,9 @@ public class DonneesPartagees {
 		cartes [12]=CartesAcquisition.creerCarteAcquisitions("1 CHIEN DE RACE", 600, 1650, 100,-1);							//1 CHIEN DE RACE			total payer 700
 		cartes [13]=CartesAcquisition.creerCarteAcquisitions("1 PISCINE", 3000, 7500, 300,-1);								//1 PISCINE					total payer 3300
 		cartes [14]=CartesAcquisition.creerCarteAcquisitions("1 SCULPTURE DE JARDIN", 450, 1200, 100,-1);					//1 SCULPTURE DE JARDIN		total payer 550
+		cartesAcquisitions = cartes;
 		return cartes;
 	}
 	
 	
-	}
+}

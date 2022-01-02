@@ -7,6 +7,7 @@ public class LaBonnePaye {
 		Scanner saisie = new Scanner(System.in);
 
 		Menu.menue(saisie);
+
 	}
 
 }

@@ -22,7 +22,7 @@ public class EffetCases {
 	}
 
 	public static void caseAcquisition/*case4...*/ () {
-		CartesAcquisition.effetCartes();
+		CartesAcquisition.effetCartesAcquisitions();
 	}
 	
 	public static void case2Courrier/*case5*/ () {

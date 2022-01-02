@@ -23,5 +23,7 @@ public class CaseVendre {
 		
 		return choixJoueur;
 }
+	
+	
 }
 
