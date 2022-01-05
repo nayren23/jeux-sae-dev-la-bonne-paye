@@ -20,6 +20,8 @@ public class EffetCases {
 		CartesCourrier.effetCartesCourrier();
 		CartesCourrier.effetCartesCourrier();
 	}
+	
+	
 
 	public static void caseAcquisition/*case4...*/ () {
 		CartesAcquisition.effetCartesAcquisitions();

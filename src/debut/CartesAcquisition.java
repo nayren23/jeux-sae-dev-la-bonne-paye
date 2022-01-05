@@ -52,10 +52,10 @@ public class CartesAcquisition {
 	 */
 	public static int  menueAleatoireAcquisitions(String [][] cartes) {
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"Piochez une carte");
-		DonneesPartagees.numeroCarteAcquisitions= (int)(Math.random()*(15));//fois une variable car carte diminue avec le jeu
+		DonneesPartagees.numeroCarteAcquisitions= (int)(Math.random()*(23));//fois une variable car carte diminue avec le jeu
 
 		while(!DonneesPartagees.cartesAcquisitions[DonneesPartagees.numeroCarteAcquisitions][4].equals("-1")) {
-			DonneesPartagees.numeroCarteAcquisitions= (int)(Math.random()*(15));//fois une variable car carte diminue avec le jeu
+			DonneesPartagees.numeroCarteAcquisitions= (int)(Math.random()*(23));//fois une variable car carte diminue avec le jeu
 			System.out.println("la valeure est"+DonneesPartagees.cartesAcquisitions[DonneesPartagees.numeroCarteAcquisitions][4]);
 		}
 		System.out.println("sah bon choix"+DonneesPartagees.numeroCarteAcquisitions);
@@ -82,14 +82,6 @@ public class CartesAcquisition {
 		return verif;
 	}
 
-	//	public static void verificationAppartencanceCarte(String [][]cartesAcquisition) {
-	//		menueAleatoireAcquisitions(cartesAcquisition);
-	//		while (cartesAcquisition[DonneesPartagees.numeroCarteAcquisitions][4]==String.valueOf(DonneesPartagees.indexeJoueurCourant)) {
-	//			menueAleatoireAcquisitions(cartesAcquisition);
-	//
-	//			//DonneesPartagees.numeroCarteAcquisitions= (int)(Math.random()*(15));//fois une variable car carte diminue avec le jeu
-	//		}
-	//}
 	public static boolean choixDuJoueurCartesAcquisition(Scanner saisie) {
 		boolean choixJoueur=false;
 		int choix;
