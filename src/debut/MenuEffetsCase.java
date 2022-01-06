@@ -1,6 +1,5 @@
 package debut;
 
-import java.util.Scanner;
 
 public class MenuEffetsCase {
 
@@ -138,14 +137,14 @@ public class MenuEffetsCase {
 
 
 	}
-	public static int lancementDes (Scanner saisie) {
+	public static int lancementDes () {
 		int choix;
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  a vous de lancer le des");
 		System.out.println("Saisissez 1 pour lancer le ");
-		choix = Integer.parseInt(saisie.nextLine());
+		choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 		while (choix!=1) {
 			System.out.println("Entrez 1 !! ");
-			choix = Integer.parseInt(saisie.nextLine());
+			choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 		}		
 		DonneesPartagees.nombreDesJoueurs= (int)(Math.random()*(6-1));
 		System.out.println("Vous avez fait " + DonneesPartagees.nombreDesJoueurs);

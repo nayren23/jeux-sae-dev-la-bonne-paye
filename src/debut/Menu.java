@@ -1,10 +1,9 @@
 package debut;
 
-import java.util.Scanner;
 
 public class Menu {
 
-	public static void menue(Scanner saisie) {   // renvoie le choix juste affiche et  faire class jeu
+	public static void menue() {   // renvoie le choix juste affiche et  faire class jeu
 
 		System.out.println("LA BONNE PAYE");
 
@@ -14,14 +13,13 @@ public class Menu {
 			System.out.println("2.Lire les regles");
 			System.out.println("3. Quitter\n");
 
-
-			System.out.println("Saisissez votre choix entre 1 et 3: ");
 			do {
-				choix=Integer.parseInt(saisie.nextLine());
 				System.out.println("Saisissez votre choix entre 1 et 3: ");
+				choix=Integer.parseInt(LaBonnePaye.saisie.nextLine());
+
 
 			}
-			while (choix!=1 && choix!=2 && choix !=3);
+			while (choix < 1 || choix > 3);
 
 			switch(choix) {
 
@@ -32,12 +30,11 @@ public class Menu {
 				break;
 
 			case 2 :
-				Regles.regles(saisie);
+				Regles.regles();
 				break;
 			}
 		}			
 		while (choix<3);
 		System.out.println("Au revoir :-) ");
-		saisie.close();	
 	}
 }

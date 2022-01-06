@@ -6,9 +6,7 @@ public class PositionPlateau {
 	public static int [] indiceCases ={ 1, 2, 3 };
 	
     	
-	public static void main(String[] args) {
 
-	}
 
 
 
@@ -32,9 +30,9 @@ public class PositionPlateau {
 		y=1+Colonnes*4;
 		//System.out.println("x vaut "+x +"y vaut " +y);
 		
-		//coordonnée point xj et yj
+		//coordonnï¿½e point xj et yj
 		int joueur=numeroJoueur +3; // 3 pour le joueur 1
-		int nbJoueurLignes =3;//nombre allant de  3 à 8 pour joueur 6
+		int nbJoueurLignes =3;//nombre allant de  3 ï¿½ 8 pour joueur 6
 		int ligne= joueur/nbJoueurLignes;//diviser par 3 pour joueur 1 par 2 pour le joueur 2
 		int colonne=0;
 		colonne =joueur%nbJoueurLignes;//diviser par 3 pour joueur 1

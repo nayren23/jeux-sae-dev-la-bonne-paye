@@ -1,13 +1,11 @@
 package debut;
-import java.util.Scanner;
 
 public class Lanceur {
 
 
 	public static void lancerJeu() {
-		Scanner saisie = new Scanner(System.in);
-		DonneesPartagees.nombreJoueurs= Joueurs.VerificationsaisieNombreJoueurs(saisie); //met le nombre de joueurs dans donnee partager
-		DonneesPartagees.tabNomJoueur=Joueurs.NomJoueur(saisie, DonneesPartagees.nombreJoueurs);
+		DonneesPartagees.nombreJoueurs= Joueurs.VerificationsaisieNombreJoueurs(); //met le nombre de joueurs dans donnee partager
+		DonneesPartagees.tabNomJoueur=Joueurs.NomJoueur( DonneesPartagees.nombreJoueurs);
 		DonneesPartagees.indexeJoueurCourant=0;//le premier Joueur et celui qui a l'index 0 pret a jouer
 
 		//System.out.println("debug tab des noms des "+DonneesPartagees.nombreJoueurs+ " joueurs");
@@ -44,50 +42,45 @@ public class Lanceur {
 //		}
 		
 		
-		plateau.afficher();
-		DonneesPartagees.tabcaseActuelleJoueur[0]=4;//tous les joueurs sur la case depart
-		MenuEffetsCase.menue();
-		plateau.afficher();
-		
-		
-		
-		plateau.afficher();
-		DonneesPartagees.tabcaseActuelleJoueur[0]=9;//tous les joueurs sur la case depart
-		MenuEffetsCase.menue();
-		plateau.afficher();
-		
-//		
-//		DonneesPartagees.tabcaseActuelleJoueur[1]=4;//tous les joueurs sur la case depart
-//		DonneesPartagees.indexeJoueurCourant+=1;
+//		{	plateau.afficher();
+//		DonneesPartagees.tabcaseActuelleJoueur[0]=4;//tous les joueurs sur la case depart
 //		MenuEffetsCase.menue();
 //		plateau.afficher();
-//
-//		
+//		}
+		
+		
+		
+		
+		{	DonneesPartagees.tabcaseActuelleJoueur[0]=9;//tous les joueurs sur la case depart
+		MenuEffetsCase.menue();
+		plateau.afficher();}
+
+		
 //				
 //		
-//		DonneesPartagees.tabcaseActuelleJoueur[2]=4;//tous les joueurs sur la case depart
+//		{	DonneesPartagees.tabcaseActuelleJoueur[2]=4;//tous les joueurs sur la case depart
 //		DonneesPartagees.indexeJoueurCourant+=1;
 //		MenuEffetsCase.menue();
-//		plateau.afficher();
+//		plateau.afficher();}
 //		
-//		DonneesPartagees.tabcaseActuelleJoueur[3]=4;//tous les joueurs sur la case depart
+//		{DonneesPartagees.tabcaseActuelleJoueur[3]=4;//tous les joueurs sur la case depart
 //		DonneesPartagees.indexeJoueurCourant+=1;
 //		MenuEffetsCase.menue();
-//		plateau.afficher();
+//		plateau.afficher();}
 //		
-//		DonneesPartagees.tabcaseActuelleJoueur[4]=4;//tous les joueurs sur la case depart
+//		{DonneesPartagees.tabcaseActuelleJoueur[4]=4;//tous les joueurs sur la case depart
 //		DonneesPartagees.indexeJoueurCourant+=1;
 //		MenuEffetsCase.menue();
-//		plateau.afficher();
+//		plateau.afficher();}
 //
-//		DonneesPartagees.tabcaseActuelleJoueur[5]=4;//tous les joueurs sur la case depart
+//		{DonneesPartagees.tabcaseActuelleJoueur[5]=4;//tous les joueurs sur la case depart
 //		DonneesPartagees.indexeJoueurCourant+=1;
 //		MenuEffetsCase.menue();
 //		plateau.afficher();
 //	
-		
-		
-	
+//		}
+//		
+//	
 
 
 

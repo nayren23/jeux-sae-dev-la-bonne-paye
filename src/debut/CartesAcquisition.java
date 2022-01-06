@@ -1,5 +1,4 @@
 package debut;
-import java.util.Scanner;
 
 public class CartesAcquisition {
 
@@ -28,7 +27,7 @@ public class CartesAcquisition {
 				+ "				+ \"|	PRIX D'ACHATS  \"" + carte[1] +"\"euros\"     |\r\n"
 				+ "				+ \"|	VALEUR REELLE  \"" + carte[2] +"\"euros\"     |\r\n"
 				+ "				+ \"|	COMMISSION     \"" + carte[3] +"\"euros\"     |\r\n"
-				+ "				+ \"|____________________________________|\");\r\n"
+				+ "				+ \"|____________________________________|\")\r\n"
 				+ "");
 	}
 
@@ -44,7 +43,7 @@ public class CartesAcquisition {
 		return carte;
 	}
 
-	//tableau acquisition à la place de switch
+	//tableau acquisition ï¿½ la place de switch
 	//tab deux dimensions chaque case acquisitions contient 1 acquisistion
 	/**
 	 * java doc
@@ -82,20 +81,20 @@ public class CartesAcquisition {
 		return verif;
 	}
 
-	public static boolean choixDuJoueurCartesAcquisition(Scanner saisie) {
+	public static boolean choixDuJoueurCartesAcquisition() {
 		boolean choixJoueur=false;
 		int choix;
 
 		if (verificationsArgentsJoueur(DonneesPartagees.cartesAcquisitions)==true) {
 			System.out.println("Voulez vous prendre la carte ?");
 			System.out.println("1 pour oui, 0 pour non");
-			choix = Integer.parseInt(saisie.nextLine());
+			choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 			while (choix<0 || choix>1) {
 				System.out.println("Entrez 0 ou 1 !! ");
-				choix = Integer.parseInt(saisie.nextLine());
+				choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 			}
 			if (choix == 0)
-				System.out.println("Dommage c'était un choix de qualité");
+				System.out.println("Dommage c'ï¿½tait un choix de qualitï¿½");
 			if (choix == 1)
 				choixJoueur=true;
 		}
@@ -104,130 +103,16 @@ public class CartesAcquisition {
 	}
 
 	public static void effetCartesAcquisitions () {	
-		Scanner saisie = new Scanner(System.in);
-		switch(menueAleatoireAcquisitions(DonneesPartagees.cartesAcquisitions)) { 
-
-		case 0 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [0][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [0][carteCommission]));			
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [0][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[0][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 1 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [1][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [1][carteCommission]));			
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [1][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[1][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 2 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [2][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [2][carteCommission]));			
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [2][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[2][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 3:
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [3][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [3][carteCommission]));			
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [3][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[3][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 4 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [4][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [4][carteCommission]));			
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [4][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[4][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 5 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [5][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [5][carteCommission]));			
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [5][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[5][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 6 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [6][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [6][carteCommission]));			
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [6][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[6][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 7 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [7][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [7][carteCommission]));			
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [7][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[7][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 8 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [8][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [8][carteCommission]));			
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [8][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[8][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 9 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [9][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [9][carteCommission]));		
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [9][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[9][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 10 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [10][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [10][carteCommission]));		
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [10][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[10][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 11 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [11][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [11][carteCommission]));			
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [11][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[11][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 12 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [12][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [12][carteCommission]));			
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [12][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[12][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 13 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [13][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [13][carteCommission]));		
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [13][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[13][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
-
-		case 14 :
-			if (choixDuJoueurCartesAcquisition(saisie)==true) {
-				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [14][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [14][carteCommission]));		
-				DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [14][carteCommission]);
-				DonneesPartagees.cartesAcquisitions[14][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
-			}
-			break;
+		
+		int aleatoireAcquisition = menueAleatoireAcquisitions(DonneesPartagees.cartesAcquisitions);
+		if(choixDuJoueurCartesAcquisition() == true){
+			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=(Integer.parseInt(DonneesPartagees.cartesAcquisitions [aleatoireAcquisition][cartePrixAchat])+ Integer.parseInt(DonneesPartagees.cartesAcquisitions [aleatoireAcquisition][carteCommission]));			
+			DonneesPartagees.montantCagnotte+=Integer.parseInt(DonneesPartagees.cartesAcquisitions [aleatoireAcquisition][carteCommission]);
+			DonneesPartagees.cartesAcquisitions[aleatoireAcquisition][ carteappartenanceDeLaCarte]=String.valueOf(DonneesPartagees.indexeJoueurCourant);
 		}
-		System.out.println("sah j'affiches le tab");
+
+		
+		System.out.println(" j'affiches le tab");
 		for (int x = 0 ; x < DonneesPartagees.cartesAcquisitions.length  ; ++x) {
 			for (int y = 1 ; y < DonneesPartagees.cartesAcquisitions[x].length ; y ++) {
 				System.out.println(DonneesPartagees.cartesAcquisitions[x][y]);

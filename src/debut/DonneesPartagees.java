@@ -49,8 +49,8 @@ public class DonneesPartagees {
 
 	public static int [] postionCase () {
 		int[] cases = new int[32];//4 pour les 4 chaine de caracteres
-		cases[0]=0;		//l'indice du tableau correspond au numéro de la case du tableau de la case
-		cases[1]=1;		//la valeur correspond à l'indice de la case a l ecran
+		cases[0]=0;		//l'indice du tableau correspond au numï¿½ro de la case du tableau de la case
+		cases[1]=1;		//la valeur correspond ï¿½ l'indice de la case a l ecran
 		cases[2]=2;
 		cases[3]=3;
 		cases[4]=4;
@@ -93,7 +93,7 @@ public class DonneesPartagees {
 		cartes [1] =CartesAcquisition.creerCarteAcquisitions("1 VOITURE DE COURSE",2850, 3600, 300,-1); 						//1 VOITURE DE COURSE 	total payer 3150
 		cartes [2]=CartesAcquisition.creerCarteAcquisitions("1 MOTO", 2400, 3600, 150,-1);									//1 MOTO					total payer 2550
 		cartes [3]=CartesAcquisition.creerCarteAcquisitions("1 COLLECTION DE B.D", 600, 1650, 50,-1);						//1 COLLECTION DE B.D		total payer 650
-		cartes [4]=CartesAcquisition.creerCarteAcquisitions("//1 CHATEAU EN ESPAGNE", 4500, 7500, 300,-1);					//1 CHATEAU EN ESPAGNE		total payer 4800
+		cartes [4]=CartesAcquisition.creerCarteAcquisitions("1 CHATEAU EN ESPAGNE", 4500, 7500, 300,-1);					//1 CHATEAU EN ESPAGNE		total payer 4800
 		cartes [5]=CartesAcquisition.creerCarteAcquisitions("1 TRACTEUR AGRICOLE", 2850, 3600, 300,-1);						//1 TRACTEUR AGRICOLE		total payer 3150
 		cartes [6]=CartesAcquisition.creerCarteAcquisitions("1 COLLECTION DE TIMBRES", 1050, 1800, 150,-1);					//1 COLLECTION DE TIMBRES	total payer 1200
 		cartes [7]=CartesAcquisition.creerCarteAcquisitions("1 BAGUETTES MAGIQUE", 2400, 3600, 150,-1);						//1 BAGUETTES MAGIQUE		total payer 2550

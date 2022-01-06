@@ -1,4 +1,5 @@
 package debut;
+
 public class plateau {
 	public static void afficher() {    
 

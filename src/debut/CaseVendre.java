@@ -1,34 +1,53 @@
 package debut;
-import java.util.Scanner;
 
 public class CaseVendre {
 
 
+	public static boolean verifCartesAcquisition() {
+		boolean carteAcquisitions=false;
 
-	public static boolean choixDuJoueur(Scanner saisie) {
+	
+		for (int x = 0 ; x < DonneesPartagees.cartesAcquisitions.length  ; ++x) {
+			for (int y = 1 ; y < DonneesPartagees.cartesAcquisitions[x].length ; y ++) {
+				if		(DonneesPartagees.cartesAcquisitions[x][4].equals(""+DonneesPartagees.indexeJoueurCourant))
+					carteAcquisitions=true;
+			}
+		}
+		return carteAcquisitions;
+
+	}
+
+	public static boolean choixDuJoueur() {
+		
 		boolean choixJoueur=false;
+		if (verifCartesAcquisition()==false){
+			System.out.println("Vous n'avez pas de cartes acquisitions pour le moments revenez quand vous en aurez !! ");
+		}
+		if (verifCartesAcquisition()==true) {
+
 		int choix;
 
 		System.out.println("Voulez vous vendre vos acquisition ?");
 		System.out.println("1 pour oui, 0 pour non");
-		choix = Integer.parseInt(saisie.nextLine());
+		choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 		while (choix<0 || choix>1) {
 			System.out.println("Entrez 0 ou 1 !! ");
-			choix = Integer.parseInt(saisie.nextLine());
+			choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 		}
 		if (choix == 0)
-			System.out.println("Dommage c'était un choix de qualité");
+			System.out.println("Dommage c'ï¿½tait un choix de qualitï¿½");
 		if (choix == 1)
 			choixJoueur=true;
 
+		}
 		return choixJoueur;
+
 	}
 
 
 	public static void vendre () {
-		Scanner saisie = new Scanner(System.in);
 
-		if (choixDuJoueur(saisie)==true) {
+		if (choixDuJoueur()==true) {
 		for (int indiceCarte=0 ; indiceCarte<DonneesPartagees.cartesAcquisitions.length ; indiceCarte++) {
 			while (DonneesPartagees.cartesAcquisitions[indiceCarte][4].equals(""+DonneesPartagees.indexeJoueurCourant)) {
 				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=Integer.parseInt(DonneesPartagees.cartesAcquisitions[indiceCarte][2]) ;

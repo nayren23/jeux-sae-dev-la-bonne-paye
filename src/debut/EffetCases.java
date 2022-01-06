@@ -11,7 +11,7 @@ public class EffetCases {
 	public static void caseConcoursBeaute/*case2*/ () {
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+" vous etes sur la case Concours de Beaute !!");
 
-		System.out.println("Bravo : "+DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  , votre chien Toutou remporte 1500 euros à un concours de beauté !!");
+		System.out.println("Bravo : "+DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  , votre chien Toutou remporte 1500 euros ï¿½ un concours de beautï¿½ !!");
 		DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]=(DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+1500);
 	}
 	
@@ -36,7 +36,7 @@ public class EffetCases {
 	public static void caseFamille/*case6*/ () {
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+" vous etes sur la case sortie en famille  !!");
 
-		System.out.println("Ho non " +DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+" vous êtes tombé sur la case sortie en famille payer 150 euros !!");
+		System.out.println("Ho non " +DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+" vous ï¿½tes tombï¿½ sur la case sortie en famille payer 150 euros !!");
 		DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]=(DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-150);
 	}
 
@@ -47,7 +47,7 @@ public class EffetCases {
 	public static void caseCaisseElectoral/*case8*/ () {
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+" vous etes sur la case Caisse Electoral c'est l'heure des elections  !!");
 
-		System.out.println("Ho non tout le monde verse 150 euros à la cagnotte !!");
+		System.out.println("Ho non tout le monde verse 150 euros ï¿½ la cagnotte !!");
 		for (int i=0; i<DonneesPartagees.nombreJoueurs;i++) {
 			DonneesPartagees.tabArgentJoueur[i]=DonneesPartagees.tabArgentJoueur[i]-150;
 		}
@@ -70,7 +70,7 @@ public class EffetCases {
 	}
 
 	public static void caseJourneeBalade/*case14*/ () {
-		System.out.println("C'est dimanche journée de balade pour "+DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  !!");
+		System.out.println("C'est dimanche journï¿½e de balade pour "+DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  !!");
 	}
 	
 	
@@ -91,7 +91,7 @@ public class EffetCases {
 	public static void caseBricolageAuJardin/*case21*/ () {
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+" vous etes sur la case Bricolage au jardin  !!");
 
-		System.out.println("Journée de bricolage au jardin pour "+DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  !!");
+		System.out.println("Journï¿½e de bricolage au jardin pour "+DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  !!");
 	}
 
 	
@@ -126,7 +126,7 @@ public class EffetCases {
 	
 	public static void caseJourDePaye/*case31*/ () {
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+" vous etes sur la case Jour de paye  !!");
-		System.out.println("C'est le jour de paye chque joueur recoit 1500 euros et retourne à la case depart");
+		System.out.println("C'est le jour de paye chque joueur recoit 1500 euros et retourne ï¿½ la case depart");
 		for (int i=0; i<DonneesPartagees.nombreJoueurs;i++) {
 			DonneesPartagees.tabcaseActuelleJoueur[i]=0;//tous les joueurs sur la case depart
 			DonneesPartagees.tabArgentJoueur[i]+=1500;//chaque jouer recoit 1500euros
