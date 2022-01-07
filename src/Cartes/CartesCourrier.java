@@ -1,4 +1,6 @@
-package debut;
+package Cartes;
+
+import Launcher.DonneesPartagees;
 
 public class CartesCourrier{
 
@@ -35,14 +37,11 @@ public class CartesCourrier{
 		return cartes;
 	}
 
-	public static int menueAleatoireCourrier(String [][] cartes/*,int Nbcartes*/) {
+	public static int menueAleatoireCourrier(String [][] cartes) {
+		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour piochez votre carte Courrier  !!");
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+ "  " +"Piochez une carte");
 		DonneesPartagees.numeroCarteCourrier=(int)(Math.random()*(20));
-
-	/*	for ( int c = 0; c <= Nbcartes; c++) {
-			DonneesPartagees.numeroCarteCourrier=(int)(Math.random()*(14));
-			dessinCarte(recupererCartesCourrier()[DonneesPartagees.numeroCarteCourrier]);
-		}*/
+		System.out.println("Très  bon choix vous avez piochez la carte : "+DonneesPartagees.numeroCarteCourrier); //affichage pour vérfication ensuite dans le tableau
 		return DonneesPartagees.numeroCarteCourrier;
 	}
 
@@ -52,6 +51,10 @@ public class CartesCourrier{
 
 
 		}
+		
+		
+		
+		
 		System.out.println(""
 				+ " __________________________________\r\n"
 				+ "| " +carte [0]  +"            |\r\n"

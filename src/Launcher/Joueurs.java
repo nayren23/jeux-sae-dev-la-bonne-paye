@@ -1,5 +1,4 @@
-package debut;
-
+package Launcher;
 
 public class Joueurs {
 
@@ -33,7 +32,8 @@ public class Joueurs {
 			System.out.println("Saisir pseudo joueur  " + (indiceNomJoueurs+1) + " : ");
 			nomJoueurs[indiceNomJoueurs] =LaBonnePaye.saisie.nextLine();
 
-			while (nomJoueurs[indiceNomJoueurs]=="" ) { // faire quelque chose pour que les joueurs ont pas le meme pseudo
+			while (nomJoueurs[indiceNomJoueurs]=="" || nomJoueurs[indiceNomJoueurs].length()<4 || nomJoueurs[indiceNomJoueurs].length()>12) { // faire quelque chose pour que les joueurs ont pas le meme pseudo
+				System.out.println("Rentrez un pseudo compris entre 4 et 12 caractères !!");
 				System.out.println("Saisir pseudo joueur  " + (indiceNomJoueurs+1) + " : ");
 				nomJoueurs[indiceNomJoueurs] =LaBonnePaye.saisie.nextLine();
 			}
@@ -44,6 +44,8 @@ public class Joueurs {
 
 			System.out.println("Le nom du joueur  " + (indiceNomJoueurs+1) + " est : " + nomJoueurs[indiceNomJoueurs]);
 		}
+		
+		System.out.println();
 		return nomJoueurs;
 	}		
 }

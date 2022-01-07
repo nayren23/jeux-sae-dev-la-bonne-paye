@@ -1,4 +1,6 @@
-package debut;
+package Affichage;
+
+import Launcher.DonneesPartagees;
 
 public class plateau {
 	public static void afficher() {    
@@ -36,6 +38,8 @@ public class plateau {
 
 
 		afficherTableauString(t);
+		AffichageBasiqueSupp.affichageInfoJoueursEnBAsDuTableau();
+		System.out.println();
 
 
 	}

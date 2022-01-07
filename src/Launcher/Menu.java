@@ -1,5 +1,4 @@
-package debut;
-
+package Launcher;
 
 public class Menu {
 
@@ -26,7 +25,7 @@ public class Menu {
 
 			case 1 :
 				System.out.println("La partie commence:");
-				Lanceur.lancerJeu();
+				ParamêtragePartie.lancerJeu();
 				break;
 
 			case 2 :

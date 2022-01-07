@@ -1,5 +1,8 @@
-package debut;
+package Cases;
 
+import Cartes.CartesQuoiDeNeuf;
+import Launcher.DonneesPartagees;
+import Launcher.LaBonnePaye;
 
 public class MenuEffetsCase {
 
@@ -56,9 +59,9 @@ public class MenuEffetsCase {
 			EffetCases.caseAcquisition();
 			break;
 
-			//		case 13 :
-			//			EffetCases.caseConcoursBeaute();
-			//			break;
+		case 13 :
+			CartesQuoiDeNeuf.effetCartesQuoiDeNeuf();
+			break;
 
 		case 14 :
 			EffetCases.caseJourneeBalade();
@@ -92,9 +95,9 @@ public class MenuEffetsCase {
 			EffetCases.caseBricolageAuJardin();
 			break;
 
-			//		case 22 :
-			//			EffetCases.caseConcoursBeaute();
-			//			break;
+		case 22 :
+			CartesQuoiDeNeuf.effetCartesQuoiDeNeuf();
+			break;
 
 		case 23 :
 			CaseVendre.vendre();

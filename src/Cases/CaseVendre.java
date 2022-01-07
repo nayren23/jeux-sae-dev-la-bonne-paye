@@ -1,4 +1,7 @@
-package debut;
+package Cases;
+
+import Launcher.DonneesPartagees;
+import Launcher.LaBonnePaye;
 
 public class CaseVendre {
 
@@ -20,9 +23,8 @@ public class CaseVendre {
 	public static boolean choixDuJoueur() {
 		
 		boolean choixJoueur=false;
-		if (verifCartesAcquisition()==false){
-			System.out.println("Vous n'avez pas de cartes acquisitions pour le moments revenez quand vous en aurez !! ");
-		}
+		
+		
 		if (verifCartesAcquisition()==true) {
 
 		int choix;
@@ -46,8 +48,12 @@ public class CaseVendre {
 
 
 	public static void vendre () {
-
-		if (choixDuJoueur()==true) {
+		
+		if (verifCartesAcquisition()==false) {
+			System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  "+"Vous n'avez pas de cartes acquisitions pour le moments revenez quand vous en aurez !! ");
+			DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laisser le prochain joueur jouer  !!  ");
+		}
+			if (choixDuJoueur()==true) {
 		for (int indiceCarte=0 ; indiceCarte<DonneesPartagees.cartesAcquisitions.length ; indiceCarte++) {
 			while (DonneesPartagees.cartesAcquisitions[indiceCarte][4].equals(""+DonneesPartagees.indexeJoueurCourant)) {
 				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=Integer.parseInt(DonneesPartagees.cartesAcquisitions[indiceCarte][2]) ;

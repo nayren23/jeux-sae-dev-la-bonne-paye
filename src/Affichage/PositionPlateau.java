@@ -1,4 +1,6 @@
-package debut;
+package Affichage;
+
+import Launcher.DonneesPartagees;
 
 public class PositionPlateau {
 
@@ -11,8 +13,13 @@ public class PositionPlateau {
 
 
 	public static  void calculPositionCase (String[][] plateau, int numeroCase,int numeroJoueur) {
+		int[] coordonnees = recupererCoordonnees(numeroCase, numeroJoueur);
+		int xj = coordonnees[0], yj = coordonnees[1];
+		//plateau[xj][yj]=String.valueOf(numeroJoueur+1)+"(" +String.valueOf(DonneesPartagees.tabArgentJoueur[numeroJoueur])+")";
+		plateau[xj][yj]=DonneesPartagees.tabNomJoueur[numeroJoueur].substring(0,4); //affiche le pseudo des joueur avec 4 caracteres
+	}
 	
-		
+	public static int[] recupererCoordonnees(int numeroCase,int numeroJoueur) {
 		int Lignes =0;
 		int Colonnes=0;
 		
@@ -38,16 +45,6 @@ public class PositionPlateau {
 		colonne =joueur%nbJoueurLignes;//diviser par 3 pour joueur 1
 		int xj= x+ligne;
 		int yj=y+colonne*1;
-
-		//System.out.println("xj vaut :" +xj+"yj vaut :"+yj);
-		
-		plateau[xj][yj]=String.valueOf(numeroJoueur+1)+"(" +String.valueOf(DonneesPartagees.tabArgentJoueur[numeroJoueur])+")";
-		//plateau[xj][yj]=DonneesPartagees.tabNomJoueur[numeroJoueur].substring(0,4); //affiche le pseudo des joueur avec 4 caracteres
-
-		
-		
-		
-		
-		
+		return new int[] {xj, yj};
 	}
 }

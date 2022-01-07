@@ -1,4 +1,4 @@
-package debut;
+package Launcher;
 
 
 public class Regles {

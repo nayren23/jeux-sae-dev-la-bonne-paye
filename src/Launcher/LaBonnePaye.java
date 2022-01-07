@@ -1,4 +1,4 @@
-package debut;
+package Launcher;
 import java.util.Scanner;
 
 public class LaBonnePaye {
