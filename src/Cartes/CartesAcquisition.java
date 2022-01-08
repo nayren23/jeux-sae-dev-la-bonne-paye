@@ -74,7 +74,9 @@ public class CartesAcquisition {
 	public static boolean verificationsArgentsJoueur(String [][] cartes) {
 		boolean verif = false;
 		if (DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]< Integer.parseInt(cartes [DonneesPartagees.numeroCarteAcquisitions][cartePrixAchat])+Integer.parseInt(cartes [DonneesPartagees.numeroCarteAcquisitions][carteCommission])) {
-			System.out.println(DonneesPartagees.tabNomJoueur [DonneesPartagees.indexeJoueurCourant]+ "  "+"Vous ne  pouvez pas  la prendre \n vous ets pauvre !!!  ");	
+			System.out.println(DonneesPartagees.tabNomJoueur [DonneesPartagees.indexeJoueurCourant]+ "  "+"Vous ne  pouvez pas  la prendre, vous êtes pauvre !!!  ");	
+			DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laisser le prochain joueur jouer  !!  ");
+
 		}
 		else if((DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]> Integer.parseInt(cartes [DonneesPartagees.numeroCarteAcquisitions][cartePrixAchat])+Integer.parseInt(cartes [DonneesPartagees.numeroCarteAcquisitions][carteCommission])) 
 				) {
@@ -97,7 +99,7 @@ public class CartesAcquisition {
 				choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 			}
 			if (choix == 0)
-				System.out.println("Dommage c'�tait un choix de qualit�");
+				System.out.println("Dommage c'était un choix de qualité");
 			if (choix == 1)
 				choixJoueur=true;
 		}

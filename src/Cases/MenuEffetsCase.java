@@ -142,7 +142,7 @@ public class MenuEffetsCase {
 	}
 	public static int lancementDes () {
 		int choix;
-		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  a vous de lancer le des");
+		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  à vous de lancer le dé");
 		System.out.println("Saisissez 1 pour lancer le ");
 		choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 		while (choix!=1) {

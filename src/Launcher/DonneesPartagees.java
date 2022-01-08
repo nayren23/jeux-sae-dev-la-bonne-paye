@@ -132,4 +132,29 @@ public class DonneesPartagees {
 			choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 		}
 	}
+	
+	
+	
+	public static int[][] tabArgentJoueursClassement(){
+	    int[] [] ArgentJoueurs = new int[6][2];//4 pour les 4 chaine de caracteres
+
+	
+	    	ArgentJoueurs[0][0]=DonneesPartagees.tabArgentJoueur[0];
+			ArgentJoueurs[1][0]=DonneesPartagees.tabArgentJoueur[1];
+			ArgentJoueurs[2][0]=DonneesPartagees.tabArgentJoueur[2];
+			ArgentJoueurs[3][0]=DonneesPartagees.tabArgentJoueur[3];
+			ArgentJoueurs[4][0]=DonneesPartagees.tabArgentJoueur[4];
+			ArgentJoueurs[5][0]=DonneesPartagees.tabArgentJoueur[5];
+			
+			
+			ArgentJoueurs[0][1]=0;
+			ArgentJoueurs[1][1]=1;
+			ArgentJoueurs[2][1]=2;
+			ArgentJoueurs[3][1]=3;
+			ArgentJoueurs[4][1]=4;
+			ArgentJoueurs[5][1]=5;;
+			return ArgentJoueurs;
+
+	}
+	
 }
