@@ -146,6 +146,7 @@ public class CartesCourrier{
 
 		case 18:
 			dessinCarte(creerCarteCourrier(recupererCartesCourrier()[18][0], recupererCartesCourrier()[18][1]));
+			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=200;						
 			break;
 		case 19 :
 			dessinCarte(creerCarteCourrier(recupererCartesCourrier()[19][0], recupererCartesCourrier()[19][1]));

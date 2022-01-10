@@ -30,60 +30,6 @@ public class ParamêtragePartie {
 			DonneesPartagees.tabMontantEpargneJoueur[i]=0;//chaque joueur a 0 euros epargner
 		}
 
-
-
-
-		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour commencer le jeu  !!");
-		plateau.afficher();
-		System.out.println("Bravo à vous de commencez " + DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant] + " !!");
-		System.out.println();
-		DonneesPartagees.tabcaseActuelleJoueur[0]+=Dée.dée();
-		if (DonneesPartagees.tabcaseActuelleJoueur[0]>31) {
-			DonneesPartagees.tabcaseActuelleJoueur[0]=31;
-		}
-		
-		plateau.afficher();
-		MenuEffetsCase.menue();
-		plateau.afficher();
-
-		DonneesPartagees.indexeJoueurCourant+=1;
-		DonneesPartagees.tabcaseActuelleJoueur[1]+=Dée.dée();//tous les joueurs sur la case depart
-	plateau.afficher();
-
-	MenuEffetsCase.menue();
-	plateau.afficher();
-
-	DonneesPartagees.indexeJoueurCourant+=1;
-
-	DonneesPartagees.tabcaseActuelleJoueur[2]+=Dée.dée();//tous les joueurs sur la case depart
-	plateau.afficher();
-
-	MenuEffetsCase.menue();
-	plateau.afficher();
-	
-	
-	DonneesPartagees.indexeJoueurCourant+=1;
-	DonneesPartagees.tabcaseActuelleJoueur[3]+=Dée.dée();//tous les joueurs sur la case depart
-	plateau.afficher();
-
-	MenuEffetsCase.menue();
-	plateau.afficher();
-
-	
-	DonneesPartagees.indexeJoueurCourant+=1;
-	DonneesPartagees.tabcaseActuelleJoueur[4]+=Dée.dée();//tous les joueurs sur la case depart
-	plateau.afficher();
-
-	MenuEffetsCase.menue();
-	plateau.afficher();
-
-	
-	DonneesPartagees.indexeJoueurCourant+=1;
-	DonneesPartagees.tabcaseActuelleJoueur[5]+=Dée.dée();//tous les joueurs sur la case depart
-	plateau.afficher();
-
-	MenuEffetsCase.menue();
-	plateau.afficher();
 	}
 }
 

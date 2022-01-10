@@ -28,6 +28,8 @@ public class DonneesPartagees {
 	//choix de la carte Courrier
 	public static int numeroCarteQuoiDeNeuf;
 	
+	//compte le nombre de tour jouer
+	public static int compteurTour=0;
 	//tableau des noms des joueurs de 0...n
 	public static String[] tabNomJoueur;
 	

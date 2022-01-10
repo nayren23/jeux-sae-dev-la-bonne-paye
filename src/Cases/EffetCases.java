@@ -81,7 +81,7 @@ public class EffetCases {
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+" vous êtes sur la case Anniversaire  !!");
 
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+" chaque joueur vous verse 150 euros !!");
-		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour payer  !!  ");
+		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour réclamer votre argent à c'est rat  !!  ");
 		for (int i=0; i<DonneesPartagees.nombreJoueurs;i++) {
 			if (i!=DonneesPartagees.indexeJoueurCourant) {
 				DonneesPartagees.tabArgentJoueur[i]-=150;
@@ -162,6 +162,8 @@ public class EffetCases {
 			DonneesPartagees.tabcaseActuelleJoueur[i]=0;//tous les joueurs sur la case depart
 			DonneesPartagees.tabArgentJoueur[i]+=1500;//chaque jouer recoit 1500euros
 		}
+		
+		DonneesPartagees.compteurTour=+1;
 	}	
 	
 	
