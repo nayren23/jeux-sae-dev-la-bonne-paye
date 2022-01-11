@@ -1,37 +1,40 @@
 package Launcher;
-import Affichage.plateau;
-import Cases.Dée;
+import Affichage.Plateau;
+import Cases.DÃ©;
 import Cases.MenuEffetsCase;
-import Launcher.ParamêtragePartie;
 public class Lanceur {
 
 
 
 	public static void lancerJeu(int nbTours) {
-		ParamêtragePartie.lancerJeu();
-		DonneesPartagees.choixDuJoueur("Appuyer sur 1 Le jeu va bientot débuter !");
+		ParametragePartie.lancerJeu();
+		DonneesPartagees.choixDuJoueur("Appuyer sur 1 Le jeu va bientot dÃ©buter !");
 
 
-		plateau.afficher();
+		Plateau.afficher();
 
 
-		System.out.println("Bravo à vous de commencez " + DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant] + " !!");
+		System.out.println("Bravo Ã  vous de commencez " + DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant] + " !!");
 		System.out.println();
 		while (DonneesPartagees.compteurTour <= nbTours) {
 			for ( DonneesPartagees.indexeJoueurCourant=0; DonneesPartagees.indexeJoueurCourant<= DonneesPartagees.nombreJoueurs-1;DonneesPartagees.indexeJoueurCourant++) {
 
-				DonneesPartagees.tabcaseActuelleJoueur[DonneesPartagees.indexeJoueurCourant]+=Dée.dée();
+				DonneesPartagees.tabcaseActuelleJoueur[DonneesPartagees.indexeJoueurCourant]+= DÃ©.dÃ©();
 				if (DonneesPartagees.tabcaseActuelleJoueur[DonneesPartagees.indexeJoueurCourant]>31) {
 					DonneesPartagees.tabcaseActuelleJoueur[DonneesPartagees.indexeJoueurCourant]=31;
 				}
-				plateau.afficher();
+				Plateau.afficher();
 				MenuEffetsCase.menue();
-				plateau.afficher();
+				Plateau.afficher();
 
-				plateau.afficher();
-
+				Plateau.afficher();
+				
+				if ( DonneesPartagees.indexeJoueurCourant==DonneesPartagees.nombreJoueurs) {
+					DonneesPartagees.indexeJoueurCourant=0;
+				}
 
 			}
+			nbTours+=1;
 		}
 	}
 }

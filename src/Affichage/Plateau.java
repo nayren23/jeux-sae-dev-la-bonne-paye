@@ -2,7 +2,7 @@ package Affichage;
 
 import Launcher.DonneesPartagees;
 
-public class plateau {
+public class Plateau {
 	public static void afficher() {    
 
 
@@ -37,7 +37,9 @@ public class plateau {
 		//afficher tab
 
 
+
 		afficherTableauString(t);
+
 		AffichageBasiqueSupp.affichageInfoJoueursEnBAsDuTableau();
 		System.out.println();
 
@@ -157,9 +159,14 @@ public class plateau {
 	}
 
 	public static void afficherTableauString(String[][] t) {
+
 		for (int k=0;k<50;k++) {
 			System.out.println();
 		}
+		System.out.println("										_________________________________\r\n"
+				+ "										|				|\r\n"
+				+ "										|     💰 LA BONNE PAYE !!!! 💰 	|\r\n"
+				+ "										|_______________________________|	");
 		//clearConsole();
 		for (int ligne = 0 ; ligne < t.length ; ligne++) {
 			for (int colonne = 0 ; colonne < t[ligne].length ; colonne++){
@@ -168,5 +175,6 @@ public class plateau {
 			}
 			System.out.println();
 		}
+
 	}
 }

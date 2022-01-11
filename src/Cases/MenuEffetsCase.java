@@ -1,8 +1,6 @@
 package Cases;
 
-import Cartes.CartesQuoiDeNeuf;
 import Launcher.DonneesPartagees;
-import Launcher.LaBonnePaye;
 
 public class MenuEffetsCase {
 
@@ -44,7 +42,7 @@ public class MenuEffetsCase {
 			break;
 
 		case 9 :
-			CaseVendre.vendre();
+			EffetCases.caseVendez();
 			break;
 
 		case 10 :
@@ -60,7 +58,7 @@ public class MenuEffetsCase {
 			break;
 
 		case 13 :
-			CartesQuoiDeNeuf.effetCartesQuoiDeNeuf();
+			EffetCases.caseQuoiDeNeuf();
 			break;
 
 		case 14 :
@@ -88,7 +86,7 @@ public class MenuEffetsCase {
 			break;
 
 		case 20 :
-			CaseVendre.vendre();
+			EffetCases.caseVendez();
 			break;
 
 		case 21 :
@@ -96,11 +94,11 @@ public class MenuEffetsCase {
 			break;
 
 		case 22 :
-			CartesQuoiDeNeuf.effetCartesQuoiDeNeuf();
+			EffetCases.caseQuoiDeNeuf();
 			break;
 
 		case 23 :
-			CaseVendre.vendre();
+			EffetCases.caseVendez();
 			break;
 
 		case 24 :
@@ -124,39 +122,16 @@ public class MenuEffetsCase {
 			break;
 
 		case 29 :
-			CaseVendre.vendre();
+			EffetCases.caseVendez();
 			break;
 
-			//		case 30 :
-			//			EffetCases.caseConcoursBeaute();
-			//			break;
+		case 30 :
+			Lotterie.effetCaseLotterie();
+			break;
 
 		case 31 :
 			EffetCases.caseJourDePaye();
 			break;
-
 		}
-
-
-
-	}
-	public static int lancementDes () {
-		int choix;
-		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  à vous de lancer le dé");
-		System.out.println("Saisissez 1 pour lancer le ");
-		choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
-		while (choix!=1) {
-			System.out.println("Entrez 1 !! ");
-			choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
-		}		
-		DonneesPartagees.nombreDesJoueurs= (int)(Math.random()*(6-1));
-		System.out.println("Vous avez fait " + DonneesPartagees.nombreDesJoueurs);
-		return DonneesPartagees.nombreDesJoueurs;		
 	}
 }
-
-
-
-
-
-

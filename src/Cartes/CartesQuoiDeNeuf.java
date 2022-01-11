@@ -50,15 +50,13 @@ public class CartesQuoiDeNeuf {
 
 
 	public static void dessinCarte (String[]carte) {
-		System.out.println(""
-				+ " __________________________________\r\n"
-				+ "| " +carte [0]  +"        	|\r\n"
-				+ "|                             	|\r\n"
-				+ "|_________________________________|\r\n"
-				+ "|"+ carte[1] +"         	|\r\n"
-				+ "|                             	|\r\n"
-				+ "|                             	|\r\n"
-				+ "|_________________________________|");
+
+		System.out.println(" ______________________________________________________________ \r\n"
+				+ "|"+ carte [0]  +"                                            		\r\n"
+				+ "|	  	       					       |\r\n"
+				+ "|______________________________________________________________|\r\n"
+				+ " "+carte[1]+ "   			       \r\n"
+				+ "|______________________________________________________________|");
 	}
 
 
@@ -69,38 +67,38 @@ public class CartesQuoiDeNeuf {
 		case 0:
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[0][0], recupererCartesQuoiDeNeuf()[0][1]));	
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=500; 
-
 			break;
+
 		case 1:
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[1][0], recupererCartesQuoiDeNeuf()[1][1]));	
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=400; 
-
 			break;
+
 		case 2:
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[2][0], recupererCartesQuoiDeNeuf()[2][1]));	
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=400; 
-
 			break;
+
 		case 3:
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[3][0], recupererCartesQuoiDeNeuf()[3][1]));	
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=600; 
-
 			break;
+
 		case 4:
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[4][0], recupererCartesQuoiDeNeuf()[4][1]));	
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=100; 
-
 			break;
+
 		case 5:
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[5][0], recupererCartesQuoiDeNeuf()[5][1]));	
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=200; 
-
 			break;
+
 		case 6:
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[6][0], recupererCartesQuoiDeNeuf()[6][1]));	
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=800; 
-
 			break;
+
 		case 7 :
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[7][0], recupererCartesQuoiDeNeuf()[7][1]));
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=200;   					 
@@ -108,12 +106,11 @@ public class CartesQuoiDeNeuf {
 
 		case 8 :
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[8][0], recupererCartesQuoiDeNeuf()[8][1]));
-
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=300;   					 
 			break;
+
 		case 9 :
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[9][0], recupererCartesQuoiDeNeuf()[9][1]));
-
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=300;   					 
 			break;
 
@@ -127,7 +124,6 @@ public class CartesQuoiDeNeuf {
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[11][0], recupererCartesQuoiDeNeuf()[11][1]));	
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=50; 
 			DonneesPartagees.montantCagnotte+=50;
-
 			break;
 
 		case 12:
@@ -140,17 +136,13 @@ public class CartesQuoiDeNeuf {
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[13][0], recupererCartesQuoiDeNeuf()[13][1]));	
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=600; 
 			DonneesPartagees.montantCagnotte+=600;
-
 			break;
 
 		case 14 :
 			dessinCarte(creerCartesQuoiDeNeuf(recupererCartesQuoiDeNeuf()[14][0], recupererCartesQuoiDeNeuf()[14][1]));	
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-=100; 
 			DonneesPartagees.montantCagnotte+=100;
-
 			break;
-
 		}
 	}
-
 }

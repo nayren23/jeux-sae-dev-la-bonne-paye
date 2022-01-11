@@ -2,29 +2,31 @@ package Cases;
 
 import Launcher.DonneesPartagees;
 
-public class DÈe {
+public class D√© {
 
 
-	public static int dÈe () {
-		int chiffreDÈe;
+	public static int d√© () {
+		int chiffreDe;
 
-		DonneesPartagees.choixDuJoueur(" Appuyer sur 1 pour lancez le dÈe !");
-		chiffreDÈe =(int)(Math.random()* 20 +1);
-		System.out.println("Wow "+DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  "+"vous avez fait  :" +chiffreDÈe );
-		if ( chiffreDÈe == 6 ) {
+		DonneesPartagees.choixDuJoueur(" Appuyer sur 1 pour lancez le d√© üé≤ !");
+		chiffreDe =(int)(Math.random()* 6 +1);
+		System.out.println("Wow "+DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  "+"vous avez fait  :" +chiffreDe );
+		if ( chiffreDe == 6 ) {
 			System.out.println("Bravo " + DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant] +" remporte la cagnotte actuelle en faisant un 6 !"); 
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant] += DonneesPartagees.montantCagnotte ; 
 			
 			
 			if ( DonneesPartagees.montantCagnotte==0) {
 				System.out.println("C'est triste il  y a plus rien, mais l'important, c'est de participer hein :) !!");
-				System.out.println("Une prochaine fois peut Ítre");
+				System.out.println("Une prochaine fois peut √™tre");
 				System.out.println();
 			}
 			
 			if ( DonneesPartagees.montantCagnotte>0) {
-				System.out.println("Hooo t'as de la chance regarde y a de l'argent ‡ rÈcupÈrer :) !!");
-				System.out.println("C'est dÈj‡ Áa nan soit heureux un peu !!!");
+				System.out.println("Hooo t'as de la chance regarde y a de l'argent √† r√©cuperer :) !!");
+				System.out.println("C'est d√©j√† √ßa nan soit heureux un peu !!!");
+				DonneesPartagees.choixDuJoueur( DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant] + "  "+ "Appuyer sur 1 pour r√©cuperer la cagnotte   !!  ");
+
 				System.out.println();
 			}
 
@@ -34,7 +36,7 @@ public class DÈe {
 
 		DonneesPartagees.choixDuJoueur(" Appuyer sur 1 pour voir sur quel case vous avez atterrit !");
 
-		return chiffreDÈe;
+		return chiffreDe;
 	}	
 }
 

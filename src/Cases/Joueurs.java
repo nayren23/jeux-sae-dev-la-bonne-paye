@@ -1,11 +1,13 @@
-package Launcher;
+package Cases;
+
+import Launcher.LaBonnePaye;
 
 public class Joueurs {
 
 	//Programme pour verifier si les joueurs rentre bien un nb joueur compris entre 2 et 6 inclus
 	public static int VerificationsaisieNombreJoueurs () { 
 		int nombreJoueurs;
-		System.out.println("Entrez le nombre de joueur");
+		System.out.println("Entrez le nombre de joueur ♟️");
 		nombreJoueurs = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 		while (nombreJoueurs<2 || nombreJoueurs>6) {
 			System.out.println("Entrez un nombre de joueur compris entre 2 et 6 !! ");

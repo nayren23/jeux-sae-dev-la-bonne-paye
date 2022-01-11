@@ -1,5 +1,7 @@
 package Cases;
 
+import Affichage.Plateau;
+import Cartes.CartesAcquisition;
 import Launcher.DonneesPartagees;
 import Launcher.LaBonnePaye;
 
@@ -29,7 +31,7 @@ public class CaseVendre {
 
 		int choix;
 
-		System.out.println("Voulez vous vendre vos acquisitions ?");
+		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"Voulez vous vendre vos acquisitions ?");
 		System.out.println("1 pour oui, 0 pour non");
 		choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 		while (choix<0 || choix>1) {
@@ -56,6 +58,8 @@ public class CaseVendre {
 			if (choixDuJoueur()==true) {
 		for (int indiceCarte=0 ; indiceCarte<DonneesPartagees.cartesAcquisitions.length ; indiceCarte++) {
 			while (DonneesPartagees.cartesAcquisitions[indiceCarte][4].equals(""+DonneesPartagees.indexeJoueurCourant)) {
+				CartesAcquisition.dessinCarte(DonneesPartagees.cartesAcquisitions[indiceCarte]);
+				DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour effectuer la transactions  !!  ");
 				DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=Integer.parseInt(DonneesPartagees.cartesAcquisitions[indiceCarte][2]) ;
 				DonneesPartagees.cartesAcquisitions[indiceCarte][4]="-1" ;
 				System.out.println("Bravo vous avez vendu toutes vos acquisitions");
@@ -63,9 +67,12 @@ public class CaseVendre {
 			
 			
 		}
+		Plateau.afficher();
+		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laisser le prochain joueur jouer  !!  ");
+
 		}
 
-		System.out.println("Salut c'est un test j'affiches le tab");
+		System.out.println("Salut c'est un test j'affiches le tab modifie");
 		for (int x = 0 ; x < DonneesPartagees.cartesAcquisitions.length  ; ++x) {
 			for (int y = 1 ; y < DonneesPartagees.cartesAcquisitions[x].length ; y ++) {
 				System.out.println(DonneesPartagees.cartesAcquisitions[x][y]);
