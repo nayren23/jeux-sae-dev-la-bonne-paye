@@ -6,7 +6,7 @@ public class Lanceur {
 
 
 
-	public static void lancerJeu(int nbTours) {
+	public static void lancerJeu() {
 		ParametragePartie.lancerJeu();
 		DonneesPartagees.choixDuJoueur("Appuyer sur 1 Le jeu va bientot débuter !");
 
@@ -16,25 +16,27 @@ public class Lanceur {
 
 		System.out.println("Bravo à vous de commencez " + DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant] + " !!");
 		System.out.println();
-		while (DonneesPartagees.compteurTour <= nbTours) {
-			for ( DonneesPartagees.indexeJoueurCourant=0; DonneesPartagees.indexeJoueurCourant<= DonneesPartagees.nombreJoueurs-1;DonneesPartagees.indexeJoueurCourant++) {
+		boolean fini = false;
+		while (DonneesPartagees.compteurTour < DonneesPartagees.nbTours) {
+			DonneesPartagees.indexeJoueurCourant=0;
+
+			while(DonneesPartagees.indexeJoueurCourant<= DonneesPartagees.nombreJoueurs-1 && !fini) {
 
 				DonneesPartagees.tabcaseActuelleJoueur[DonneesPartagees.indexeJoueurCourant]+= Dé.dé();
+
 				if (DonneesPartagees.tabcaseActuelleJoueur[DonneesPartagees.indexeJoueurCourant]>31) {
 					DonneesPartagees.tabcaseActuelleJoueur[DonneesPartagees.indexeJoueurCourant]=31;
+					
 				}
+
 				Plateau.afficher();
 				MenuEffetsCase.menue();
+				if(DonneesPartagees.compteurTour == DonneesPartagees.nbTours)
+					fini = true;
 				Plateau.afficher();
-
 				Plateau.afficher();
-				
-				if ( DonneesPartagees.indexeJoueurCourant==DonneesPartagees.nombreJoueurs) {
-					DonneesPartagees.indexeJoueurCourant=0;
-				}
-
+				DonneesPartagees.indexeJoueurCourant++;
 			}
-			nbTours+=1;
 		}
 	}
 }

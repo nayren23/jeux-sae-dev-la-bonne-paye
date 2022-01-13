@@ -1,6 +1,5 @@
 package Cases;
 
-import Affichage.Plateau;
 import Cartes.CartesAcquisition;
 import Cartes.CartesCourrier;
 import Cartes.CartesQuoiDeNeuf;
@@ -148,7 +147,8 @@ public class EffetCases {
 			DonneesPartagees.tabArgentJoueur[i]+=1500;//chaque jouer recoit 1500euros
 		}
 
-		DonneesPartagees.compteurTour=+1;
+		++DonneesPartagees.compteurTour;
+		System.out.println("Vous avez fait "+DonneesPartagees.compteurTour);
 	}	
 
 

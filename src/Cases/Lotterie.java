@@ -10,7 +10,7 @@ public class Lotterie {
 	public static void effetCaseLotterie () {
 		int prono;
 		int chiffreDée;
-		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant] + " Est tombé sur la case lotterie la participation est de 100 euros !\nVoudrez vous participez ?");
+		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant] + " Est tombé sur la case lotterie la participation est de 100 euros , et vous gagnez 1000 euros si vous gagnez !!\nVoudrez vous participez ?");
 		System.out.println("Vous avez tous une chance de gagner et de partiper mais seulement qu'une seule fois"); 
 		for ( DonneesPartagees.indexeJoueurCourant = 0; DonneesPartagees.indexeJoueurCourant<= DonneesPartagees.nombreJoueurs-1;DonneesPartagees.indexeJoueurCourant++) {
 
@@ -31,11 +31,13 @@ public class Lotterie {
 					DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant] += 1000;
 					DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laissez le prochain joueur jouez !!!");
 				} 
+				else {
+					System.out.println("Sniff vous n'avez pas gagner 😢");
+					System.out.println("Vous aurez plus de chance la prochaine fois");
+					DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laissez le prochain joueur jouez !!!");
+				}  
 			} 
-			else {
-				System.out.println("Vous aurez plus de chance la prochaine fois");
-				DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laissez le prochain joueur jouez !!!");
-			}  
+
 		}
 	}
 

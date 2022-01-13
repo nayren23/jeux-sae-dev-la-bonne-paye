@@ -5,18 +5,18 @@ import Cases.Joueurs;
 public class ParametragePartie {
 
 	public static void choixManches() {
-		int nbTours= 0;
+		DonneesPartagees.nbTours= 0;
 		System.out.println("La partie va commencer ! ");
 
 		do {
 			System.out.println("Choissiez le nombre de tours a joué");
-			nbTours =Integer.parseInt(LaBonnePaye.saisie.nextLine());
-			if (nbTours <= 0)
+			DonneesPartagees.nbTours =Integer.parseInt(LaBonnePaye.saisie.nextLine());
+			if (DonneesPartagees.nbTours <= 0)
 				System.out.println("Le nombre de tour dois être supérieur à 0");
 			
 		} 
-		while (nbTours <= 0);
-		Lanceur.lancerJeu(nbTours);
+		while (DonneesPartagees.nbTours <= 0);
+		Lanceur.lancerJeu();
 	}
 
 
@@ -38,7 +38,7 @@ public class ParametragePartie {
 		//Initialisation des donnees partager avant le  debut  de la partie
 		for (int i=0; i<DonneesPartagees.nombreJoueurs;i++) {
 			DonneesPartagees.tabcaseActuelleJoueur[i]=0;//tous les joueurs sur la case depart
-			DonneesPartagees.tabArgentJoueur[i]=1500;//chaque jouer recoit 1500euros
+			DonneesPartagees.tabArgentJoueur[i]=3000;//chaque jouer recoit 3000euros
 			DonneesPartagees.tabNombreAcquisitionsJoueur[i]=0; //chaque joueur possede 0 acquisition
 			//			DonneesPartagees.tabNombrePretsJoueur[i]=0;//chaque joueur a 0 pret				 //extension probable
 			//			DonneesPartagees.tabMontantEpargneJoueur[i]=0;//chaque joueur a 0 euros epargner //extension probable

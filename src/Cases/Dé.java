@@ -25,7 +25,7 @@ public class Dé {
 			if ( DonneesPartagees.montantCagnotte>0) {
 				System.out.println("Hooo t'as de la chance regarde y a de l'argent à récuperer :) !!");
 				System.out.println("C'est déjà ça nan soit heureux un peu !!!");
-				DonneesPartagees.choixDuJoueur( DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant] + "  "+ "Appuyer sur 1 pour récuperer la cagnotte   !!  ");
+				DonneesPartagees.choixDuJoueur(  "appuyer sur 1 pour récuperer la cagnotte   !!  ");
 
 				System.out.println();
 			}

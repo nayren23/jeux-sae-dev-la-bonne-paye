@@ -7,7 +7,7 @@ public class Joueurs {
 	//Programme pour verifier si les joueurs rentre bien un nb joueur compris entre 2 et 6 inclus
 	public static int VerificationsaisieNombreJoueurs () { 
 		int nombreJoueurs;
-		System.out.println("Entrez le nombre de joueur ♟️");
+		System.out.println("Entrez le nombre de joueur ♟️ (Entre 2 et 6 ! 😁 )");
 		nombreJoueurs = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 		while (nombreJoueurs<2 || nombreJoueurs>6) {
 			System.out.println("Entrez un nombre de joueur compris entre 2 et 6 !! ");
@@ -31,7 +31,7 @@ public class Joueurs {
 
 		// remplissage du tableau
 		for (int indiceNomJoueurs = 0 ; indiceNomJoueurs < nomJoueurs.length ; indiceNomJoueurs++) {  
-			System.out.println("Saisir pseudo joueur  " + (indiceNomJoueurs+1) + " : ");
+			System.out.println("Saisir pseudo joueur " + (indiceNomJoueurs+1) + "  compris entre 4 et 12 caractères " +" : ");
 			nomJoueurs[indiceNomJoueurs] =LaBonnePaye.saisie.nextLine();
 
 			while (nomJoueurs[indiceNomJoueurs]=="" || nomJoueurs[indiceNomJoueurs].length()<4 || nomJoueurs[indiceNomJoueurs].length()>12) { // faire quelque chose pour que les joueurs ont pas le meme pseudo

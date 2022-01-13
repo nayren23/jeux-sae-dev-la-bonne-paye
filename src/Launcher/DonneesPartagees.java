@@ -3,7 +3,11 @@ package Launcher;
 import Cartes.CartesAcquisition;
 
 public class DonneesPartagees {
-
+	
+	//nombre de tours choisi par les joueurs
+	public static int nbTours;
+	
+	
 	//nombre de joueurs de 2 ...6
 	public static int nombreJoueurs;
 

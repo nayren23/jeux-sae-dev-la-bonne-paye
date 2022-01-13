@@ -3,14 +3,14 @@ package Launcher;
 public class Menu {
 
 	public static void menue() {   // renvoie le choix juste affiche et  faire class jeu
-
-		System.out.println("LA BONNE PAYE");
+	
+		System.out.println("\nLA BONNE PAYE \n");
 
 		int choix=0;   
 
 		do {
 			System.out.println("1. Jouer");
-			System.out.println("2.Lire les regles");
+			System.out.println("2. Lire les regles");
 			System.out.println("3. Quitter\n");
 
 			do {
