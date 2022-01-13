@@ -11,4 +11,14 @@ public class AffichageBasiqueSupp {
 		}
 		System.out.println();
 	}
+
+	public static void gagnant() {
+		int indexeJoueurs=0;
+		for (int i=0;i<DonneesPartagees.tabArgentJoueur.length-1;i++) {
+			if (DonneesPartagees.tabArgentJoueur[i]<DonneesPartagees.tabArgentJoueur[i+1]) {
+				indexeJoueurs=i+1;
+			}
+		}
+		System.out.println("Le gagnant est " + DonneesPartagees.tabNomJoueur[indexeJoueurs] +"  avec " +DonneesPartagees.tabArgentJoueur[indexeJoueurs] +"€  bravo à lui !! \n" );
+	}
 }

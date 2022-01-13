@@ -5,13 +5,8 @@ import Launcher.DonneesPartagees;
 public class PositionPlateau {
 
 	
-	public static int [] indiceCases ={ 1, 2, 3 };
+	//public static int [] indiceCases ={ 1, 2, 3 };
 	
-    	
-
-
-
-
 	public static  void calculPositionCase (String[][] plateau, int numeroCase,int numeroJoueur) {
 		int[] coordonnees = recupererCoordonnees(numeroCase, numeroJoueur);
 		int xj = coordonnees[0], yj = coordonnees[1];

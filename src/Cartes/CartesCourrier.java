@@ -8,7 +8,6 @@ public class CartesCourrier{
 		String[]carte = new String[2];
 		carte [0]= nom;
 		carte [1]= String.valueOf(texte);
-
 		return carte;
 	}
 

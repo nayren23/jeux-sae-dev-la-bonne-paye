@@ -1,4 +1,5 @@
 package Launcher;
+import Affichage.AffichageBasiqueSupp;
 import Affichage.Plateau;
 import Cases.Dé;
 import Cases.MenuEffetsCase;
@@ -26,7 +27,7 @@ public class Lanceur {
 
 				if (DonneesPartagees.tabcaseActuelleJoueur[DonneesPartagees.indexeJoueurCourant]>31) {
 					DonneesPartagees.tabcaseActuelleJoueur[DonneesPartagees.indexeJoueurCourant]=31;
-					
+
 				}
 
 				Plateau.afficher();
@@ -38,5 +39,6 @@ public class Lanceur {
 				DonneesPartagees.indexeJoueurCourant++;
 			}
 		}
+		AffichageBasiqueSupp.gagnant();
 	}
 }

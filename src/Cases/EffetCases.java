@@ -67,7 +67,6 @@ public class EffetCases {
 		DonneesPartagees.montantCagnotte+=DonneesPartagees.nombreJoueurs*150;
 		System.out.println("Remercier "+DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]);
 		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laisser le prochain joueur jouer  !!  ");
-
 	}
 
 	public static void caseAnniversaire/*case10*/ () {
@@ -81,13 +80,11 @@ public class EffetCases {
 		}
 		DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]+=(DonneesPartagees.nombreJoueurs-1)*150;
 		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laisser le prochain joueur jouer  !!  ");
-
 	}
 
 	public static void caseJourneeBalade/*case14*/ () {
 		System.out.println("C'est dimanche journée de balade pour "+DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  !!");
 		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laisser le prochain joueur jouer  !!  ");
-
 	}
 
 
@@ -98,7 +95,6 @@ public class EffetCases {
 		DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]=(DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-150);
 		DonneesPartagees.montantCagnotte+=150;
 		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laisser le prochain joueur jouer  !!  ");
-
 	}
 
 	public static void caseShopping/*case19*/ () {
@@ -108,14 +104,12 @@ public class EffetCases {
 		DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]=(DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant]-250);
 		DonneesPartagees.montantCagnotte+=250;
 		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laisser le prochain joueur jouer  !!  ");
-
 	}
 
 	public static void caseBricolageAuJardin/*case21*/ () {
 		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+" vous êtes sur la case Bricolage au jardin  !!");
 		System.out.println("Journée de bricolage au jardin pour "+DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+"  !!");
 		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laisser le prochain joueur jouer  !!  ");
-
 	}
 
 
@@ -148,7 +142,7 @@ public class EffetCases {
 		}
 
 		++DonneesPartagees.compteurTour;
-		System.out.println("Vous avez fait "+DonneesPartagees.compteurTour);
+		System.out.println("Vous avez fait  "+DonneesPartagees.compteurTour+"  tours");
 	}	
 
 
@@ -164,10 +158,4 @@ public class EffetCases {
 		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour effectuer la transactions  !!  ");
 		DonneesPartagees.choixDuJoueur("Appuyer sur 1 pour laisser le prochain joueur jouer  !!  ");
 	}
-
-
 }
-
-
-
-

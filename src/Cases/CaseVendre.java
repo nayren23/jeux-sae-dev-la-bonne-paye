@@ -64,7 +64,7 @@ public class CaseVendre {
 				DonneesPartagees.cartesAcquisitions[indiceCarte][4]="-1" ;
 				System.out.println("Bravo vous avez vendu toutes vos acquisitions");
 			}
-			
+
 			
 		}
 		Plateau.afficher();

@@ -14,14 +14,14 @@ public class Dé {
 		if ( chiffreDe == 6 ) {
 			System.out.println("Bravo " + DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant] +" remporte la cagnotte actuelle en faisant un 6 !"); 
 			DonneesPartagees.tabArgentJoueur[DonneesPartagees.indexeJoueurCourant] += DonneesPartagees.montantCagnotte ; 
-			
-			
+
+
 			if ( DonneesPartagees.montantCagnotte==0) {
 				System.out.println("C'est triste il  y a plus rien, mais l'important, c'est de participer hein :) !!");
 				System.out.println("Une prochaine fois peut être");
 				System.out.println();
 			}
-			
+
 			if ( DonneesPartagees.montantCagnotte>0) {
 				System.out.println("Hooo t'as de la chance regarde y a de l'argent à récuperer :) !!");
 				System.out.println("C'est déjà ça nan soit heureux un peu !!!");

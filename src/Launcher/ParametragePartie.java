@@ -13,7 +13,7 @@ public class ParametragePartie {
 			DonneesPartagees.nbTours =Integer.parseInt(LaBonnePaye.saisie.nextLine());
 			if (DonneesPartagees.nbTours <= 0)
 				System.out.println("Le nombre de tour dois être supérieur à 0");
-			
+
 		} 
 		while (DonneesPartagees.nbTours <= 0);
 		Lanceur.lancerJeu();

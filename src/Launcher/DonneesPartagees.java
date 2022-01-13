@@ -3,11 +3,13 @@ package Launcher;
 import Cartes.CartesAcquisition;
 
 public class DonneesPartagees {
+
+	//indexe du joueurs  qui joue actuellement dans loteriz de 0...n
+	public static int indexeJoueurCourantLoterie;   
 	
 	//nombre de tours choisi par les joueurs
 	public static int nbTours;
-	
-	
+
 	//nombre de joueurs de 2 ...6
 	public static int nombreJoueurs;
 
@@ -31,7 +33,7 @@ public class DonneesPartagees {
 
 	//compte le nombre de tour jouer
 	public static int compteurTour;
-	
+
 	//tableau des noms des joueurs de 0...n
 	public static String[] tabNomJoueur;
 
@@ -44,15 +46,14 @@ public class DonneesPartagees {
 	// tableau contenant le nombre d'acquisition  de chaque joueur  de 0 ...n
 	public static int[] tabNombreAcquisitionsJoueur;
 
-
 	// tableau des acquisitions pour chaque joueurs avec quel acquisitions il possede: [indexeJoueurrs][indexAcqisition]indexe 0...n
 	public static int[][] tabAcquisitionsJoueur;
 
-	// tableau contenant le nombre de prets  de chaque joueur  de 0 ...n
-	public static int[] tabNombrePretsJoueur;
-
-	// tableau contenant le montant de l'epargne de chaque joueur  de 0 ...n
-	public static int[] tabMontantEpargneJoueur;
+//	// tableau contenant le nombre de prets  de chaque joueur  de 0 ...n
+//	public static int[] tabNombrePretsJoueur;
+//
+//	// tableau contenant le montant de l'epargne de chaque joueur  de 0 ...n
+//	public static int[] tabMontantEpargneJoueur;
 
 
 	public static int [] postionCase () {
@@ -91,10 +92,17 @@ public class DonneesPartagees {
 		cases[31]=13;
 		return  cases;
 	}
-	public static String[][] cartesAcquisitions  = new String[23][5];//4 pour les 4 chaine de caracteres
+/**
+ * Créer un nv tab contenant les cartes acqusitions qui lui peut etre modifié alors que l'autre lui est a  chaque fois créer et réinitialiser
+ */
+	public static String[][] cartesAcquisitions  = new String[23][5];//nouveaux tab qui est  modifié lors de l'achat d'une cartes ou de sa vente
 
 
 	// NE DOIT ETRE APPELE Qu'1 FOIS
+	/**
+	 * Fonction créer un tab à 2 dimensions contenant toutes les cartes dont chaque ligne contient les infos de chaque cartes 
+	 * @return tab 2 cartes
+	 */
 	public static String [][] creerCartesAcquisitions () {            
 		String[][] cartes = new String[23][5];//4 pour les 4 chaine de caracteres
 		cartes [0]=CartesAcquisition.creerCarteAcquisitions("1 BELLE ANTIQUITE", 3000,7500, 300,-1);                            //1 BELLE ANTIQUITE     total payer 3300
@@ -112,7 +120,6 @@ public class DonneesPartagees {
 		cartes [12]=CartesAcquisition.creerCarteAcquisitions("1 CHIEN DE RACE", 600, 1650, 100,-1);                            //1 CHIEN DE RACE            total payer 700
 		cartes [13]=CartesAcquisition.creerCarteAcquisitions("1 PISCINE", 3000, 7500, 300,-1);                                //1 PISCINE                    total payer 3300
 		cartes [14]=CartesAcquisition.creerCarteAcquisitions("1 SCULPTURE DE JARDIN", 450, 1200, 100,-1);                    //1 SCULPTURE DE JARDIN        total payer 550
-		//14 cartes de base pour maths random a 15
 		cartes [15]=CartesAcquisition.creerCarteAcquisitions("1 VIGNOBLE QUI RAPPORTE", 3000, 4500, 450,-1);                //1 VIGNOBLE QUI RAPPORTE    total payer 3450
 		cartes [16]=CartesAcquisition.creerCarteAcquisitions("1 CAMIONNETTE POUR VENDRE DES KEBABS", 1050, 1800, 150,-1);    //1 CAMIONNETTE POUR VENDRE DES KEBABS        total payer 1200
 		cartes [17]=CartesAcquisition.creerCarteAcquisitions("1 COLLIER DE CHIEN SERTI DE DIAMANTS", 1000, 1800, 100,-1);    //1 COLLIER DE CHIEN SERTI DE DIAMANTS        total payer 1100
@@ -121,44 +128,23 @@ public class DonneesPartagees {
 		cartes [20]=CartesAcquisition.creerCarteAcquisitions("1 CLUB DE FOOTBALL DE DEUXIEME DIVISION", 2400, 3600, 150,-1);//1 CLUB DE FOOTBALL DE DEUXIEME DIVISION        total payer 2550
 		cartes [21]=CartesAcquisition.creerCarteAcquisitions("1 CHEVAL DE COURSE", 2100, 4200, 200,-1);                        //1 CHEVAL DE COURSE        total payer 2300
 		cartes [22]=CartesAcquisition.creerCarteAcquisitions("1 VIEUX TACOT", 1050, 1800, 150,-1);                            //1 VIEUX TACOT        total payer 1200
-		cartesAcquisitions = cartes;
+		cartesAcquisitions = cartes; //met les données dans un nv tab qui lui peut etre modifié 
 		return cartes;
 	}
 
-	public static void choixDuJoueur(String cartesPiochez) {
+	/**
+	 * Fonction demande choix du joueur avec prend en compte la phrase à lui demander "question" force la saisit à 1
+	 * @param question
+	 */
+	public static void choixDuJoueur(String question) {
 		int choix;
-
-		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+ "  " +cartesPiochez );
+		System.out.println(DonneesPartagees.tabNomJoueur[DonneesPartagees.indexeJoueurCourant]+ "  " +question );
 		choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
+		
 		while (choix!=1) {
 			System.out.println(DonneesPartagees.tabNomJoueur [DonneesPartagees.indexeJoueurCourant]+ "  "+ "Entrez 1 !! ");
 			System.out.println( DonneesPartagees.tabNomJoueur [DonneesPartagees.indexeJoueurCourant]+ "  "+"t'abuses tu peux pas arnaquer le jeu !! ");
 			choix = Integer.parseInt(LaBonnePaye.saisie.nextLine());
 		}
 	}
-
-
-
-	public static int[][] tabArgentJoueursClassement(){
-		int[] [] ArgentJoueurs = new int[6][2];//4 pour les 4 chaine de caracteres
-
-
-		ArgentJoueurs[0][0]=DonneesPartagees.tabArgentJoueur[0];
-		ArgentJoueurs[1][0]=DonneesPartagees.tabArgentJoueur[1];
-		ArgentJoueurs[2][0]=DonneesPartagees.tabArgentJoueur[2];
-		ArgentJoueurs[3][0]=DonneesPartagees.tabArgentJoueur[3];
-		ArgentJoueurs[4][0]=DonneesPartagees.tabArgentJoueur[4];
-		ArgentJoueurs[5][0]=DonneesPartagees.tabArgentJoueur[5];
-
-
-		ArgentJoueurs[0][1]=0;
-		ArgentJoueurs[1][1]=1;
-		ArgentJoueurs[2][1]=2;
-		ArgentJoueurs[3][1]=3;
-		ArgentJoueurs[4][1]=4;
-		ArgentJoueurs[5][1]=5;;
-		return ArgentJoueurs;
-
-	}
-
 }

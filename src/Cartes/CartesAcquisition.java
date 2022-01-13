@@ -19,10 +19,7 @@ public class CartesAcquisition {
 	 */
 	public static void dessinCarte (String[]carte) {
 		for (int i=0; i<carte.length;i++) {
-
-
 		}
-
 
 		System.out.println(" ______________________________________________________________ \r\n"
 				+ "|	"+ carte [0]  +"                                            		\r\n"
@@ -32,9 +29,17 @@ public class CartesAcquisition {
 				+ "|	VALEUR REELLE :  " + carte[2] + "€"+ "				       |\r\n"
 				+ "|	COMMISSION :     " + carte[3] + "€"+ "    			       |\r\n"
 				+ "|______________________________________________________________|");
-
 	}
-
+/**
+ * Fonction qui creer les cartes acquisitions avec en entrée les valeurs du tab a 2 dimensions creer cartes acquisitions 
+ * Créer  dans un tab à 1 dimensions toutes les info des cartes acquisitions avec leur création dans cree carte acquisitions
+ * @param nom à partir du tab creerCartesAcquisitions
+ * @param prixAchat nom à partir du tab creerCartesAcquisitions
+ * @param valeurReelle nom à partir du tab creerCartesAcquisitions
+ * @param commission nom à partir du tab creerCartesAcquisitions
+ * @param appartenanceDeLaCarte nom à partir du tab creerCartesAcquisitions
+ * @return un tab à 1 dimensions avec toutes les infos des cartes
+ */
 	public static String[] creerCarteAcquisitions (String nom,  int prixAchat,int valeurReelle, int commission,int appartenanceDeLaCarte) {			//1 BELLE ANTIQUITE
 		String[]carte = new String[5];
 		carte [carteNom]= nom;
